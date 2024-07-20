@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+         <!-----------------Header Section----------------->
         <div id="header">
             <div class="container">
                 <nav>
@@ -26,5 +27,96 @@
                 </div>
             </div>
         </div>
+
+        <!-----------------About Section----------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="Images/AboutImg.jpg" alt="About Me Img">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>Lorem ipsum turpis suscipit inceptos ad arcu condimentum interdum habitant dictumst, 
+                            luctus nostra vestibulum nostra dictum blandit dictum interdum dictum, potenti ultrices 
+                            velit per eleifend massa placerat lorem dapibus. Ante taciti dolor tellus scelerisque 
+                            dapibus nostra conubia sociosqu erat, risus sem integer aliquam pellentesque justo urna in, 
+                            porta nisl sociosqu morbi augue volutpat duis vivamus. Risus suscipit interdum dapibus aliquam 
+                            lacinia eget metus tellus torquent arcu, nulla orci pellentesque lacus lectus nullam molestie 
+                            tempor platea, massa quis libero porta magna lorem dui inceptos volutpat.
+                        
+
+                        <!-- <div class="tab-titles">
+                            <p class="tab-links active-link">Skills</p>
+                            <p class="tab-links">Experience</p>
+                            <p class="tab-links">Education</p>
+                        </div>
+                         -->
+
+                        
+                        <!-----------------About Section's Radio Btn----------------->
+                        <div class="radio-inputs">
+                            <label class="radio">
+                              <input type="radio" name="radio" id="skills-radio" onclick="opentab('skills-content')" checked="" />
+                              <span class="name">Skills</span>
+                            </label>
+                            <label class="radio">
+                              <input type="radio" name="radio" id="experience-radio" onclick="opentab('experience-content')"/>
+                              <span class="name">Experience</span>
+                            </label>
+                          
+                            <label class="radio">
+                              <input type="radio" name="radio" id="education-radio" onclick="opentab('education-content')"/>
+                              <span class="name">Education</span>
+                            </label>
+                          </div>
+                        
+                          <div id="skills-content" class="tab-content active-tab">
+                            <ul>
+                                <li><span>Skill 1</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Skill 2</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Skill 3</span><br>Designer skskskskdk sdsd</li>
+                            </ul>
+                        </div>
+                        <div id="experience-content" class="tab-content">
+                            <ul>
+                                <li><span>Experience 1</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Experience 2</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Experience 3</span><br>Designer skskskskdk sdsd</li>
+                            </ul>
+                        </div>
+                        <div id="education-content" class="tab-content">
+                            <ul>
+                                <li><span>Education 1</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Education 2</span><br>Designer skskskskdk sdsd</li>
+                                <li><span>Education 3</span><br>Designer skskskskdk sdsd</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <!-----------------Java Script Event Listeners To Show/Hide Corresponding Content----------------->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const radios = document.querySelectorAll('.radio input');
+                const contents = document.querySelectorAll('.tab-content');
+        
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        contents.forEach(content => {
+                            content.classList.remove('active-tab');
+                        });
+                        document.getElementById(`${radio.id.split('-')[0]}-content`).classList.add('active-tab');
+                    });
+                });
+            });
+        </script>
+        
+
+
     </body>
 </html>
