@@ -170,7 +170,7 @@ nav ul li a:hover::after{
 
 
 /*-----------------About Section's Radio Btn-----------------*/
-.radio-inputs {
+.radio-inputs{
     position: relative;
     display: flex;
     border-radius: 0.5rem;
@@ -179,13 +179,13 @@ nav ul li a:hover::after{
     font-size: 16px;
     width: 90%;
     padding: 1rem 1rem 0 1rem;
-  }
+}
   
-  .radio-inputs .radio input {
+.radio-inputs .radio input{
     display: none;
-  }
+}
   
-  .radio-inputs .radio .name {
+.radio-inputs .radio .name{
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -197,37 +197,173 @@ nav ul li a:hover::after{
     color: #0B0C10;
     transition: all 0.15s ease-in-out;
     position: relative;
-  }
+}
   
-  .radio-inputs .radio input:checked + .name {
+.radio-inputs .radio input:checked + .name{
     background-color: #45A29E;
     font-weight: 600;
-  }
-  .radio-inputs .radio input + .name:hover {
+}
+
+.radio-inputs .radio input + .name:hover{
     color: #45A29E;
-  }
-  .radio-inputs .radio input:checked + .name:hover {
+}
+
+.radio-inputs .radio input:checked + .name:hover{
     color: #1d1d29;
-  }
+}
   
-  .radio-inputs .radio input:checked + .name::after,
-  .radio-inputs .radio input:checked + .name::before {
+.radio-inputs .radio input:checked + .name::after,
+.radio-inputs .radio input:checked + .name::before{
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #c5c6c7;
     bottom: 0;
-  }
+}
   
-  .radio-inputs .radio input:checked + .name::after {
+.radio-inputs .radio input:checked + .name::after{
     right: -10px;
     border-bottom-left-radius: 300px;
     box-shadow: -3px 3px 0px 3px #45A29E;
-  }
-  .radio-inputs .radio input:checked + .name::before {
+}
+
+.radio-inputs .radio input:checked + .name::before{
     left: -10px;
     border-bottom-right-radius: 300px;
     box-shadow: 3px 3px 0px 3px #45A29E;
+}
+  
+
+/*-----------------Pre Loader-----------------*/
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5c6c7;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.main-content{ /*Hide main content at start*/
+    display: none;
+}
+
+.preloader-text {
+    margin-bottom: 20px;
+    color: #0b0c10;
+    animation: text_713 3.5s ease both infinite;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+  
+.preload{
+    position: relative;
+    background-color: #45a29e;
+    border-radius: 50px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    animation: loading_713 3.5s ease both infinite;
+}
+  
+.preload::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #66fcf1;
+    border-radius: inherit;
+    animation: loading2_713 3.5s ease both infinite;
+}
+  
+  @keyframes text_713{
+    0% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        letter-spacing: 2px;
+        transform: translateX(26px);
+    }
+  
+    80%{
+        letter-spacing: 1px;
+        transform: translateX(32px);
+    }
+  
+    90%{
+         letter-spacing: 2px;
+        transform: translateX(0px);
+    }
+  
+    100%{
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
   }
+  
+  @keyframes loading_713{
+    0%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        width: 10%;
+        transform: translateX(0px);
+    }
+  
+    80%{
+        width: 16px;
+        transform: translateX(64px);
+    }
+  
+    90%{
+        width: 10%;
+        transform: translateX(0px);
+    }
+  
+    100%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+  }
+  
+  @keyframes loading2_713{
+    0%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        width: 80%;
+        transform: translateX(0%);
+    }
+  
+    80%{
+        width: 100%;
+        transform: translateX(0px);
+    }
+  
+    90%{
+        width: 80%;
+        transform: translateX(15px);
+    }
+  
+    100%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+}
+   
+
+
+  
   

@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-----------------Pre Loader----------------->    
+        <div class="preloader">
+            <span class="preloader-text">loading</span>
+            <span class="preload"></span>
+        </div>
+
+
          <!-----------------Header Section----------------->
         <div id="header">
             <div class="container">
@@ -101,8 +108,9 @@
         </div>
 
         
-        <!-----------------Java Script Event Listeners To Show/Hide Corresponding Content----------------->
+        <!-----------------Java Script----------------->
         <script>
+            //Java Script Event Listeners To Show/Hide Corresponding Content
             document.addEventListener('DOMContentLoaded', function() {
                 const radios = document.querySelectorAll('.radio input');
                 const contents = document.querySelectorAll('.tab-content');
@@ -116,9 +124,18 @@
                     });
                 });
             });
-        </script>
-        
 
+
+            //Pre Loader JS
+            window.addEventListener('load', function() {
+                const preloader = document.querySelector('.preloader');
+                const mainContent = document.querySelector('.main-content');
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 3000);
+            });
+        </script>
 
     </body>
 </html>
