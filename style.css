@@ -15,13 +15,10 @@ body{
 }
 
 
-/*-----------------Header Section-----------------*/
+/*-----------------Home/Header Section-----------------*/
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/Background.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .container{
@@ -88,12 +85,24 @@ nav{
 
 }
 
-.header-text{
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: safe;
+    padding-left: 70px;
+    padding-right: 108px;
+    padding-top: 120px;
+}
+
+.home-text{
     margin-top: 20%;
     font-size: 30px;
 }
 
-.header-text h1{
+.home-text h1{
     margin: -3px 0;
     font-size: 60px;
     font-weight: 700;
@@ -103,7 +112,7 @@ nav{
     animation-delay: 1s;
 }
 
-.header-text h3{
+.home-text h3{
     margin: -3px 0;
     font-size: 32px;
     font-weight: 700;
@@ -112,19 +121,26 @@ nav{
     animation-delay: .7s;
 }
 
-.header-text h3:nth-of-type(2){
+.home-text h3:nth-of-type(2){
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
 
-.header-text h3 span{
+.home-text h3 span{
     color: #66FCF1;
 }
 
-/*-----------------Animated header text-----------------*/
-
-
+/*-----------------Home Selfie Image-----------------*/
+.selfie img{
+    width: 500px;
+    max-width: 600px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    border-radius: 50%;
+    box-shadow: 5px 25px 50px #66fcf1;
+}
 
 
 /*-----------------About Section-----------------*/
@@ -424,6 +440,36 @@ nav{
     100%{
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+
+/*-----------------Header Selfie-----------------*/
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*-----------------Header Selfie Float-----------------*/
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-24px);
+    }
+
+    100%{
+        transform: translateY(0);
     }
 }
 
