@@ -23,3 +23,13 @@ window.addEventListener('load', function() {
         mainContent.style.display = 'block';
     }, 3000);
 });
+
+
+//Typing Text Animation for Header Text
+var typed = new Typed(".mult-text", {
+    strings: ["Frontend Developer", "Backend Developer", "Web Developer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+})

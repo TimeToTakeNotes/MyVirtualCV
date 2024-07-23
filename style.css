@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -8,9 +10,10 @@
 
 body{
     background: #0b0c10;
-    color: #c5c6c7;
+    color: #fff;
      
 }
+
 
 /*-----------------Header Section-----------------*/
 #header{
@@ -32,24 +35,44 @@ nav{
     flex-wrap: wrap;
 }
 
+/*-----------------Logo-----------------*/
 .logo{
-    width: 200px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
-nav ul li{
+.logo span{
+    color: #66fcf1;
+    font-size: 50px;
+}
+
+
+/*-----------------Navbar-----------------*/
+.navbar ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 
-nav ul li a{
-    color: #c5c6c7;
+.navbar ul li a{
+    display: inline-block;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
+    font-weight: 500;
+    transition: .3s;
+    opacity: 0;
     position: relative;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
-nav ul li a::after{
+.navbar ul li a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -60,8 +83,9 @@ nav ul li a::after{
     transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+.navbar ul li a:hover::after{
     width: 100%;
+
 }
 
 .header-text{
@@ -70,81 +94,38 @@ nav ul li a:hover::after{
 }
 
 .header-text h1{
-    margin-top: 20px;
+    margin: -3px 0;
     font-size: 60px;
-}
-
-.header-text h1 span{
+    font-weight: 700;
     color: #66FCF1;
-}
-
-/*Animated header text*/
-/* :root{
-    --bg-color: #c5c6c7;
-}
-
-h1{
-    font-size: 3em;
-    font-weight: normal;
-    margin: 0;
-}
-
-.home-title{
-    display: block;
-}
-
-.home-title span{
-    position: relative;
-    overflow: hidden;
-    display: block;
-    line-height: 1.2;
-}
-
-.home-title span::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: c5c6c7;
-    animation: a-ltr-after 1s cubic-bezier(.77, 0, .18, 1) forwards;
-    transform: translateX(101%);
-}
-
-.home-title span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(0);
-}
-
-.home-title span:nth-of-type(1)::before,
-.home-title span:nth-of-type(1)::after{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
 
-.home-title span:nth-of-type(2)::before,
-.home-title span:nth-of-type(2)::after{
-    animation-delay: 1.5s;
+.header-text h3{
+    margin: -3px 0;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 
-@keyframes a-ltr-after {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(101%); }
+.header-text h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 
-@keyframes a-ltr-before{
-    0% {transform: translateX(0)}
-    100% {transform: translateX(200%)}
+.header-text h3 span{
+    color: #66FCF1;
 }
 
- */
+/*-----------------Animated header text-----------------*/
+
+
+
 
 /*-----------------About Section-----------------*/
 #about{
@@ -356,87 +337,6 @@ h1{
     border-radius: inherit;
     animation: loading2_713 3.5s ease both infinite;
 }
-  
-  @keyframes text_713{
-    0% {
-        letter-spacing: 1px;
-        transform: translateX(0px);
-    }
-  
-    40%{
-        letter-spacing: 2px;
-        transform: translateX(26px);
-    }
-  
-    80%{
-        letter-spacing: 1px;
-        transform: translateX(32px);
-    }
-  
-    90%{
-         letter-spacing: 2px;
-        transform: translateX(0px);
-    }
-  
-    100%{
-        letter-spacing: 1px;
-        transform: translateX(0px);
-    }
-  }
-  
-  @keyframes loading_713{
-    0%{
-        width: 16px;
-        transform: translateX(0px);
-    }
-  
-    40%{
-        width: 10%;
-        transform: translateX(0px);
-    }
-  
-    80%{
-        width: 16px;
-        transform: translateX(64px);
-    }
-  
-    90%{
-        width: 10%;
-        transform: translateX(0px);
-    }
-  
-    100%{
-        width: 16px;
-        transform: translateX(0px);
-    }
-  }
-  
-  @keyframes loading2_713{
-    0%{
-        width: 16px;
-        transform: translateX(0px);
-    }
-  
-    40%{
-        width: 80%;
-        transform: translateX(0%);
-    }
-  
-    80%{
-        width: 100%;
-        transform: translateX(0px);
-    }
-  
-    90%{
-        width: 80%;
-        transform: translateX(15px);
-    }
-  
-    100%{
-        width: 16px;
-        transform: translateX(0px);
-    }
-}
    
 
 /*-----------------Services Section-----------------*/
@@ -485,4 +385,128 @@ h1{
 }
 
 
+/*-----------------KEYFRAMES-----------------*/
+/*-----------------Logo-----------------*/
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*-----------------Navbar-----------------*/
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*-----------------Header Text-----------------*/
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*-----------------Preloader-----------------*/
+@keyframes text_713{
+    0% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        letter-spacing: 2px;
+        transform: translateX(26px);
+    }
+  
+    80%{
+        letter-spacing: 1px;
+        transform: translateX(32px);
+    }
+  
+    90%{
+         letter-spacing: 2px;
+        transform: translateX(0px);
+    }
+  
+    100%{
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+}
+  
+@keyframes loading_713{
+    0%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        width: 10%;
+        transform: translateX(0px);
+    }
+  
+    80%{
+        width: 16px;
+        transform: translateX(64px);
+    }
+  
+    90%{
+        width: 10%;
+        transform: translateX(0px);
+    }
+  
+    100%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+}
+  
+@keyframes loading2_713{
+    0%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+  
+    40%{
+        width: 80%;
+        transform: translateX(0%);
+    }
+  
+    80%{
+        width: 100%;
+        transform: translateX(0px);
+    }
+  
+    90%{
+        width: 80%;
+        transform: translateX(15px);
+    }
+  
+    100%{
+        width: 16px;
+        transform: translateX(0px);
+    }
+}
   
