@@ -34,7 +34,7 @@ nav{
 
 /*-----------------Logo-----------------*/
 .logo{
-    font-size: 30px;
+    font-size: 32px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -98,13 +98,13 @@ nav{
 }
 
 .home-text{
-    margin-top: 20%;
-    font-size: 30px;
+    margin-top: 120px;
+    font-size: 40px;
 }
 
 .home-text h1{
     margin: -3px 0;
-    font-size: 60px;
+    font-size: 62px;
     font-weight: 700;
     color: #66FCF1;
     opacity: 0;
@@ -114,7 +114,7 @@ nav{
 
 .home-text h3{
     margin: -3px 0;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
