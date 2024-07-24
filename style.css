@@ -41,6 +41,10 @@ nav{
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+    background: linear-gradient(to right, #fff, #66FCF1);
+    background-clip: text;
+    color: transparent;
+    
 }
 
 .logo span{
@@ -69,8 +73,43 @@ nav{
     animation-delay: calc(.2s * var(--i));
 }
 
+.navbar ul li a.active::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #66FCF1;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 25px;
+    transform: scaleX(1);
+    background: #66FCF1;
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
 .navbar ul li a::after{
-    content: '';
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #66FCF1;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 25px;
+    transform: scaleX(0);
+    background: #66FCF1;
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* .navbar ul li a::after{
+    content: "";
     width: 0;
     height: 3px;
     background: #66FCF1;
@@ -82,8 +121,7 @@ nav{
 
 .navbar ul li a:hover::after{
     width: 100%;
-
-}
+} */
 
 .home{
     width: 100%;
@@ -93,7 +131,7 @@ nav{
     justify-content: space-between;
     align-items: safe;
     padding-left: 70px;
-    padding-right: 108px;
+    padding-right: 70px;
     padding-top: 120px;
 }
 
@@ -139,15 +177,15 @@ nav{
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
     border-radius: 50%;
-    box-shadow: 5px 25px 50px #66fcf1;
+    box-shadow: 5px 10px 50px #66fcf1, -5px -5px 12px #45a29e;
 }
 
 
 /*-----------------About Section-----------------*/
 #about{
     padding: 80px 0;
-    color: #0B0C10;
-    background-color: #c5c6c7;
+    color: #fff;
+    background-color: #0b0c10;
 }
 
 .row{
@@ -174,7 +212,10 @@ nav{
 .subtitle{
     font-size: 60px;
     font-weight: 600;
-    color: #45A29E;
+    background: linear-gradient(to right, #45A29E, #66FCF1);
+    background-clip: text;
+    color: transparent;
+    
 }
 
 
@@ -208,17 +249,19 @@ nav{
 
 
 .tab-content{
-    border: 1px solid #45A29E;
+    border: 1px solid #66FCF1;
     padding: 10px;
-    background-color: #45A29E;
+    background-color: #66FCF1;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
+
 .tab-content ul li{
     list-style: inside;
     margin: 10px 0;
+    color: #0B0C10;
 }
 
 .tab-content ul li span{
@@ -246,7 +289,7 @@ nav{
     position: relative;
     display: flex;
     border-radius: 0.5rem;
-    background-color: #c5c6c7;
+    background-color: #0b0c10;
     box-sizing: border-box;
     font-size: 16px;
     width: 90%;
@@ -266,22 +309,22 @@ nav{
     border-top-right-radius: 0.5rem;
     border: none;
     padding: 0.5rem 0.8rem;
-    color: #0B0C10;
+    color: #fff;
     transition: all 0.15s ease-in-out;
     position: relative;
 }
   
 .radio-inputs .radio input:checked + .name{
-    background-color: #45A29E;
+    background-color: #66FCF1;
     font-weight: 600;
 }
 
 .radio-inputs .radio input + .name:hover{
-    color: #45A29E;
+    color: #66FCF1;
 }
 
 .radio-inputs .radio input:checked + .name:hover{
-    color: #1d1d29;
+    color: #0b0c10;
 }
   
 .radio-inputs .radio input:checked + .name::after,
@@ -290,20 +333,20 @@ nav{
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #c5c6c7;
+    background-color: #0b0c10;
     bottom: 0;
 }
   
 .radio-inputs .radio input:checked + .name::after{
     right: -10px;
     border-bottom-left-radius: 300px;
-    box-shadow: -3px 3px 0px 3px #45A29E;
+    box-shadow: -3px 3px 0px 3px #66FCF1;
 }
 
 .radio-inputs .radio input:checked + .name::before{
     left: -10px;
     border-bottom-right-radius: 300px;
-    box-shadow: 3px 3px 0px 3px #45A29E;
+    box-shadow: 3px 3px 0px 3px #66FCF1;
 }
   
 
@@ -317,7 +360,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c5c6c7;
+    background-color: #fff;
     z-index: 1000;
     flex-direction: column;
 }
@@ -359,7 +402,9 @@ nav{
 .subtitle2{
     font-size: 60px;
     font-weight: 600;
-    color: #66fcf1;
+    background: linear-gradient(to right, #45A29E, #66FCF1);
+    background-clip: text;
+    color: transparent;
 }
 
 
@@ -375,7 +420,7 @@ nav{
 }
 
 
-/*-----------------Portfolio Section-----------------*/
+/*-----------------Work Section-----------------*/
 #portfolio{
     padding: 50px 0;
 }
@@ -435,7 +480,7 @@ nav{
     background: #fff;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 50%; 
     text-align: center;
 }
 
@@ -457,11 +502,89 @@ nav{
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
+    background-color: #0b0c10;
 }
 
 .btn:hover{
     background: #66fcf1;
 }
+
+
+/*-----------------Contact Section-----------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #66FCF1;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 32px;
+    margin-right: 15px;
+    color: #fff;
+    display: inline-block;
+    transition:  transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #66FCF1;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    color: #0B0C10;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #1f2833;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
 
 
 /*-----------------KEYFRAMES-----------------*/

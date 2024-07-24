@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//Navbar home links
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            links.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+
+
 //Pre Loader That displays for a while before rest of site is shown
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
