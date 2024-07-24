@@ -142,7 +142,7 @@ nav{
 
 .home-text h1{
     margin: -3px 0;
-    font-size: 62px;
+    font-size: 64px;
     font-weight: 700;
     color: #66FCF1;
     opacity: 0;
@@ -583,6 +583,74 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+
+
+
+/*-----------------CSS for Small Screens-----------------*/
+@media only screen and (max-width: 600px) {
+    .home {
+        width: 100%;
+        height: auto; /* Use auto height for better content flow */
+        padding: 20px; /* Add some padding for better spacing */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        margin-left: 15%;
+    }
+    
+    .home-text {
+        margin-top: 20px; /* Reduced margin for better fit on screen */
+        font-size: 16px;
+        text-align: center; /* Center text for better appearance */
+    }
+    
+    .home-text h1 {
+        margin: 10px 0; /* Adjusted margin for better spacing */
+        font-size: 24px; /* Slightly smaller font size */
+        font-weight: 700;
+        color: #66FCF1;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: 1s;
+    }
+    
+    .home-text h3 {
+        margin: 8px 0; /* Adjusted margin for better spacing */
+        font-size: 20px; /* Slightly smaller font size */
+        font-weight: 700;
+        opacity: 0;
+        animation: slideBottom 1s ease forwards;
+        animation-delay: .7s;
+    }
+    
+    .home-text h3:nth-of-type(2) {
+        margin-bottom: 20px; /* Reduced bottom margin */
+        animation: slideTop 1s ease forwards;
+        animation-delay: .7s;
+    }
+    
+    .home-text h3 span {
+        color: #66FCF1;
+    }
+    
+    /*-----------------Home Selfie Image-----------------*/
+    .selfie img {
+        width: 100%; /* Ensure image is responsive */
+        max-width: 250px; /* Maximum width for image */
+        height: auto; /* Maintain aspect ratio */
+        opacity: 0;
+        animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+        animation-delay: 2s, 3s;
+        border-radius: 50%;
+        box-shadow: 5px 10px 50px #66fcf1, -5px -5px 12px #45a29e;
+        margin-top: 20px;
+    }
+}
+
+
+
+
 
 
 
