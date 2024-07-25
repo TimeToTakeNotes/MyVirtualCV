@@ -34,7 +34,7 @@ nav{
 
 /*-----------------Logo-----------------*/
 .logo{
-    font-size: 32px;
+    font-size: 36px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -252,10 +252,7 @@ nav{
     border: 1px solid #66FCF1;
     padding: 10px;
     background-color: #66FCF1;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .tab-content ul li{
@@ -272,7 +269,7 @@ nav{
 
 .tab-content{
     display: none;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tab-content.active-tab{
@@ -280,7 +277,7 @@ nav{
 }
 
 .name{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -587,8 +584,12 @@ form .btn2{
 
 
 /*-----------------CSS for Small Screens-----------------*/
+nav .menu-icon{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    .home {
+    .home{
         width: 100%;
         height: auto; /* Use auto height for better content flow */
         padding: 20px; /* Add some padding for better spacing */
@@ -599,13 +600,13 @@ form .btn2{
         margin-left: 15%;
     }
     
-    .home-text {
+    .home-text{
         margin-top: 20px; /* Reduced margin for better fit on screen */
         font-size: 16px;
         text-align: center; /* Center text for better appearance */
     }
     
-    .home-text h1 {
+    .home-text h1{
         margin: 10px 0; /* Adjusted margin for better spacing */
         font-size: 24px; /* Slightly smaller font size */
         font-weight: 700;
@@ -615,7 +616,7 @@ form .btn2{
         animation-delay: 1s;
     }
     
-    .home-text h3 {
+    .home-text h3{
         margin: 8px 0; /* Adjusted margin for better spacing */
         font-size: 20px; /* Slightly smaller font size */
         font-weight: 700;
@@ -624,18 +625,18 @@ form .btn2{
         animation-delay: .7s;
     }
     
-    .home-text h3:nth-of-type(2) {
+    .home-text h3:nth-of-type(2){
         margin-bottom: 20px; /* Reduced bottom margin */
         animation: slideTop 1s ease forwards;
         animation-delay: .7s;
     }
     
-    .home-text h3 span {
+    .home-text h3 span{
         color: #66FCF1;
     }
     
     /*-----------------Home Selfie Image-----------------*/
-    .selfie img {
+    .selfie img{
         width: 100%; /* Ensure image is responsive */
         max-width: 250px; /* Maximum width for image */
         height: auto; /* Maintain aspect ratio */
@@ -646,6 +647,27 @@ form .btn2{
         box-shadow: 5px 10px 50px #66fcf1, -5px -5px 12px #45a29e;
         margin-top: 20px;
     }
+
+
+    /*-----------------Home Hamburger Menu Icon-----------------*/
+
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #45A29E;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+
 }
 
 
