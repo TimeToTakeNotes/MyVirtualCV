@@ -592,24 +592,24 @@ nav .fa-solid{
 @media only screen and (max-width: 600px) {
     .home{
         width: 100%;
-        height: auto; /* Use auto height for better content flow */
-        padding: 20px; /* Add some padding for better spacing */
+        height: auto;
+        padding: 20px;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center items vertically */
-        align-items: center; /* Center items horizontally */
-        margin-left: 15%;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        /* margin-left: 15%; */
     }
     
     .home-text{
-        margin-top: 20px; /* Reduced margin for better fit on screen */
+        margin-top: 20px;
         font-size: 16px;
-        text-align: center; /* Center text for better appearance */
+        text-align: center;
     }
     
     .home-text h1{
-        margin: 10px 0; /* Adjusted margin for better spacing */
-        font-size: 24px; /* Slightly smaller font size */
+        margin: 10px 0;
+        font-size: 24px;
         font-weight: 700;
         color: #66FCF1;
         opacity: 0;
@@ -618,8 +618,8 @@ nav .fa-solid{
     }
     
     .home-text h3{
-        margin: 8px 0; /* Adjusted margin for better spacing */
-        font-size: 20px; /* Slightly smaller font size */
+        margin: 8px 0;
+        font-size: 20px;
         font-weight: 700;
         opacity: 0;
         animation: slideBottom 1s ease forwards;
@@ -627,7 +627,7 @@ nav .fa-solid{
     }
     
     .home-text h3:nth-of-type(2){
-        margin-bottom: 20px; /* Reduced bottom margin */
+        margin-bottom: 20px;
         animation: slideTop 1s ease forwards;
         animation-delay: .7s;
     }
@@ -638,9 +638,9 @@ nav .fa-solid{
     
     /*-----------------Home Selfie Image-----------------*/
     .selfie img{
-        width: 100%; /* Ensure image is responsive */
-        max-width: 250px; /* Maximum width for image */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        max-width: 250px; 
+        height: auto; 
         opacity: 0;
         animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
         animation-delay: 2s, 3s;
@@ -673,14 +673,21 @@ nav .fa-solid{
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: right 0.3s ease;
+        transition: right 0.5s ease;
+        color: #0B0C10;
+        background: linear-gradient(to right, #45A29E, #66FCF1);
     }
 
     nav ul li{
         display: block;
         margin: 25px 0;
-        font-size: 32px;
+        font-size: 36px !important;
+        color: #0B0C10;
         text-align: center;
+    }
+
+    nav ul li a{
+        color: #0B0C10 !important;
     }
 
     nav ul .fa-x{
@@ -692,6 +699,37 @@ nav .fa-solid{
         cursor: pointer;
         z-index: 2;
     }
+
+
+    /*-----------------Home Hamburger Menu Icon-----------------*/
+    .subtitle, .subtitle2{
+        font-size: 42px;
+    }
+
+    .about-col1, .about-col2{
+        flex-basis: 100%; 
+    }
+
+    .about-col1{
+        margin-bottom: 30px;
+    }
+
+    .about-col1 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-col2{
+        font-size: 14px;
+    }
+
+    .radio-inputs{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+
+    
 }
 
 
