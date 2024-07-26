@@ -1,3 +1,17 @@
+//Side Menu for Small/Mobile Screens
+document.addEventListener("DOMContentLoaded", function() {
+    var sidemenu = document.getElementById("sidemenu");
+
+    window.openmenu = function() {
+        sidemenu.style.right = "0";
+    };
+
+    window.closemenu = function() {
+        sidemenu.style.right = "-200px";
+    };
+});
+
+
 //Event Listeners To Show/Hide Corresponding Content
 document.addEventListener('DOMContentLoaded', function() {
     const radios = document.querySelectorAll('.radio input');
