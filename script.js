@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //Contact Form to Submit to Google Sheets
-const scriptURL = 'https://script.google.com/macros/s/AKfycby1EqzB3zVUJ-JNTq7GiEU1ZzEgAkzdPBcoTZZqqRHTHTazR9clAsn1uV7jITZBJhc/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycby60wMVaQdYUGrNi3MPNChsYx4ESiAxaTswDaVx034SiYv1BtSrpb6O4nb2vrCcxAOt/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
