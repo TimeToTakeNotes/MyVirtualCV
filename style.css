@@ -182,7 +182,8 @@ nav{
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
     border-radius: 50%;
-    box-shadow: 5px 10px 50px #66fcf1, -5px -5px 12px #45a29e;
+    
+    box-shadow:  5px -5px 30px #45A29E, -20px 15px 30px #66fcf1;
 }
 
 
@@ -820,7 +821,7 @@ nav .fa-solid{
     }
 
     50%{
-        transform: translateY(-24px);
+        transform: translateY(-12px);
     }
 
     100%{
