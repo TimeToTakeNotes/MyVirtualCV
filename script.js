@@ -46,7 +46,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //Typing Text Animation for Header Text
     var typed = new Typed(".mult-text",{
-        strings: ["Frontend Developer", "Backend Developer", "Web Developer"],
+        strings: [
+            "Frontend Developer",
+            "Backend Developer",
+            "Web Developer",
+            "Python Enthusiast",
+            "Java Programmer",
+            "SQL Specialist",
+            "Data Science Aficionado",
+            "Cybersecurity Enthusiast",
+            "AI Explorer",
+            "Software Developer",
+            "Problem Solver",
+    ],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
