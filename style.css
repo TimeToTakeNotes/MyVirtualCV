@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
 
+/*-----------------General Styles-----------------*/
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +16,6 @@ html{
 body{
     background: #0b0c10;
     color: #fff;
-     
 }
 
 
@@ -48,7 +48,6 @@ nav{
     background: linear-gradient(to right, #fff, #66FCF1);
     background-clip: text;
     color: transparent;
-    
 }
 
 .logo span{
@@ -600,7 +599,7 @@ nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .home{
         width: 100%;
         height: auto;
@@ -746,17 +745,7 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
-
-
-
-    
 }
-
-
-
-
-
-
 
 
 /*-----------------KEYFRAMES-----------------*/

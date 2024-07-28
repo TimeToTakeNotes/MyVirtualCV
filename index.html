@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Arno Christie - Virtual CV</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!--For typing animation in header text-->
-        <script src="https://kit.fontawesome.com/c47759d4b5.js" crossorigin="anonymous"></script> <!--For using cool icons-->
+        <script defer  src="script.js"></script>
+        <script defer  src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!--For typing animation in header text-->
+        <script defer src="https://kit.fontawesome.com/c47759d4b5.js" crossorigin="anonymous"></script> <!--For using cool icons-->
     </head>
 
-    
+
     <body>
         <!-----------------Pre Loader----------------->    
         <!-- <div class="preloader">
@@ -23,9 +23,9 @@
          <!-----------------Header Section----------------->
             <header class="header">
                 <div class="container">
-                    <nav class="navbar">
+                    <nav class="navbar" role="navigation">
                         <a href="#" class="logo">Portfolio<span>.</span></a>
-                        <ul id="sidemenu">
+                        <ul id="sidemenu" role="menu">
                             <i class="fa-solid fa-x" onclick="closemenu()"></i>
                             <li><a href="#header" class="nav-link" style="--i:1;">Home</a></li>
                             <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
@@ -38,6 +38,8 @@
                 </div>
             </header>
 
+
+            <!-----------------Home Section----------------->
             <section class="home">
                 <div class="home-text">
                     <h3>Hello, It's Me</h3>
@@ -51,11 +53,11 @@
         
 
         <!-----------------About Section----------------->
-        <div id="about">
+        <section id="about" class="about">
             <div class="container">
                 <div class="row">
                     <div class="about-col1">
-                        <img src="Images/AboutImg.jpg" alt="About Me Img.">
+                        <img src="Images/AboutImg.jpg" alt="About Me Image.">
                     </div>
                     <div class="about-col2">
                         <h1 class="subtitle">About Me</h1>
@@ -119,11 +121,11 @@
                 </div>
 
             </div>
-        </div>
+        </section>
 
 
         <!-----------------Services Section----------------->
-        <div id="services">
+        <section id="services" class="services">
             <div class="container">
                 <h1 class="subtitle2">My Services</h1>
                 <div class="services-list">
@@ -144,11 +146,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         <!-----------------Work Section----------------->
-        <div id="work">
+        <section id="work" class="work">
             <div class="container">
                 <h1 class="subtitle2">My Work</h1>
                 <div class="work-list">
@@ -179,11 +181,11 @@
                 </div>
                 <!-- <a href="#" class="btn">See more</a> -->
             </div>
-        </div>
+        </section>
 
 
         <!-----------------Contact Section----------------->
-        <div id="contact">
+        <section id="contact" class="contact">
             <div class="container">
                 <div class="row">
                     <div class="contact-left">
@@ -209,9 +211,9 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>Copyright © Arno Christie.</p>
-            </div>
-        </div>
+            <footer class="copyright">
+                <p>&copy; 2024 Arno Christie. All Rights Reserved.</p>
+            </footer>
+        </section>
     </body>
 </html>
