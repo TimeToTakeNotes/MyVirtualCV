@@ -493,7 +493,7 @@ nav{
 }
 
 .work:hover .layer{
-    height: 100%;
+    height: 100% !important;
 }
 
 .btn{
@@ -532,6 +532,12 @@ nav{
     margin-top: 15px;
     margin-right: 10px;
     font-size: 25px;
+    transition:  transform 0.5s;
+}
+
+.contact-left p i:hover{
+    color: #fff;
+    transform: translateY(-5px);
 }
 
 .social-icons{
