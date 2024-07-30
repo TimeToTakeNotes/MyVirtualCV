@@ -26,12 +26,11 @@ This portfolio website is designed to provide a comprehensive overview of my bac
 - Contact: Provides contact information and a form to get in touch.
 
 ## Features
-Pre-loader: A loading screen that appears while the page content is loading.
-Interactive Navbar: Responsive navigation menu with smooth transitions.
-Dynamic Content: Sections with interactive tabs and animations.
-Responsive Design: Adaptable layout for various screen sizes and devices.
-Social Media Integration: Links to my social media profiles.
-Downloadable CV: Option to download my CV as a PDF.
+- Interactive Navbar: Responsive navigation menu with smooth transitions.
+- Dynamic Content: Sections with interactive tabs and animations.
+- Responsive Design: Adaptable layout for various screen sizes and devices.
+- Social Media Integration: Links to my social media profiles.
+- Downloadable CV: Option to download my CV as a PDF.
 
 ## Technologies
 The website is built using the following technologies:
