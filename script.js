@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(function(){
         preloader.style.display = 'none';
         mainContent.style.display = 'block';
-    }, 3000);
+    }, 1000);
  
 
     //Typing Text Animation for Header Text
