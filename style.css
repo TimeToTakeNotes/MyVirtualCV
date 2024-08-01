@@ -527,7 +527,7 @@ nav{
 }
 
 .work:hover .layer{
-    height: 100% !important;
+    height: 100%;
 }
 
 .btn{
