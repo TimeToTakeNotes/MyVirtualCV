@@ -520,7 +520,33 @@ nav{
     height: 60px;
     border-radius: 50%; 
     text-align: center;
+    transition: 0.3s;
+    position: relative;
 }
+
+.layer a:hover{
+    color: #45A29E;
+    transform: scale(1.2);
+}
+
+/* .layer a:hover::before {
+    content: "Hover Label"; 
+    position: absolute;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #45A29E; 
+    color: #fff; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.layer a:hover::before {
+    opacity: 1;
+} */
 
 .work:hover img{
     transform: scale(1.1);
