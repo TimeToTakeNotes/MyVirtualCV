@@ -44,12 +44,12 @@ The website is built using the following technologies:
 - Google Sheets: For contact form submissions.
 
 ## Dependencies:
-The website uses external libraries and fonts. Ensure you have an active internet connection for these resources to load correctly:
+The website uses external libraries and fonts:
 - Typed.js
 - Font Awesome
 - Google Fonts
 
 # Usage
 - Navigation: Use the navbar to navigate between different sections of the site.
-- Contact Form: Fill out the form in the Contact section to send a message. Ensure you have a proper backend setup if you're integrating form submission.
+- Contact Form: Fill out the form in the Contact section to send a message.
 - Work Section: Click on project images to view details and links to live projects or repositories.
