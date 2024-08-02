@@ -15,6 +15,7 @@ This section describes the files included in the project.
 - `index.html`: The main HTML file that structures the webpage.
 - `style.css`: The CSS file that styles the webpage.
 - `script.js`: The JavaScript file that adds interactivity to the webpage.
+- `Images`: File that contains all website images and CV pdf file.
 - `README.md`: This README file that contains project documentation.
 
 ## Description
