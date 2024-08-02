@@ -3,25 +3,11 @@
 Welcome to my personal portfolio website, [Click here to learn more about my IT journey!](https://timetotakenotes.github.io/MyVirtualCV/). This site showcases my work, skills, and services as a student and aspiring IT professional. Below you'll find details about the site's structure, dependencies, and how to set it up locally.
 
 ## Table of Contents
-- [Project Structure](project-structure)
 - [File Descriptions](#file-descriptions)
 - [Description](#description)
 - [Introduction](#introduction)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-
-## Project Structure
-.
-├── images/
-│   └── Portrait.png
-│   └── AboutImg.jpg
-│   └── FlappyBirdClone.jpg
-│   └── RockPaperScissors.jpeg
-│   └── ArnoChristie-CV.pdf
-├── README.md
-├── index.html
-├── styles.css
-├── main.js
 
 ## File Descriptions
 This section describes the files included in the project.
