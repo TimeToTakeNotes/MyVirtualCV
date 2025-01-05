@@ -464,13 +464,18 @@ nav{
 }
 
 .work-list{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    scroll-behavior: smooth;
+    overflow-x: auto;
     margin-top: 50px;
 }
 
 .work{
+    flex: 0 0 auto;
+    width: 435px;
+    height: 350px;
+    margin-right: 40px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -573,6 +578,11 @@ nav{
     background: #66fcf1;
 }
 
+.btn-next, .btn-pre{
+    border-radius: 100% !important;
+    padding: 20px !important;
+}
+
 
 /*-----------------Contact Section-----------------*/
 .contact-left{
@@ -584,7 +594,7 @@ nav{
 }
 
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .contact-left p i{
@@ -601,7 +611,7 @@ nav{
 }
 
 .social-icons{
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .social-icons a{

@@ -90,3 +90,22 @@ document.addEventListener("DOMContentLoaded", function(){
         console.error('Form not found!');
     }
 });
+
+
+// Work Section Slider
+const workContainers = [...document.querySelectorAll('.work-list')];
+const nxtBtn = [...document.querySelectorAll('.btn-next')]
+const preBtn = [...document.querySelectorAll('.btn-pre')]
+
+workContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+})
