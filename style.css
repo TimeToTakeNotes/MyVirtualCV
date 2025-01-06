@@ -688,6 +688,16 @@ nav .fa-solid{
     .home-text h1 {
         font-size: 40px;
     }
+
+    .work{
+        flex: 0 0 auto;
+        width: 100%;
+        height: 300px;
+        margin-right: 40px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 @media only screen and (max-width: 600px){
