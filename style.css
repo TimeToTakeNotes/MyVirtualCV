@@ -200,12 +200,12 @@ nav{
     background: #66fcf1;
     box-shadow:  24px -24px 57px #45A29E, -24px 24px 57px #66FCF1;
     background: linear-gradient(70deg, #fff 10%, #c5c6c7 30%, #1f2833 50%, #0b0c10 75%);
+    margin-top: -50px;
 }
 
 
 /*-----------------About Section-----------------*/
 #about{
-    padding: 80px 0;
     color: #fff;
     background-color: #0b0c10;
 }
@@ -418,15 +418,6 @@ nav{
    
 
 /*-----------------specialization Section-----------------*/
-.subtitle2{
-    font-size: 60px;
-    font-weight: 600;
-    background: linear-gradient(to right, #45A29E, #66FCF1);
-    background-clip: text;
-    color: transparent;
-}
-
-
 #specialization{
     padding: 30px 0;
 }
@@ -729,22 +720,94 @@ nav .fa-solid{
 }
 
 @media (max-width: 1024px){
-    .home-text h1 {
-        font-size: 50px;
+    .home-text h1, .home-text h3{
+        font-size: 21px;
     }
 
-    .work {
-        flex: 0 0 calc(50% - 20px);
+    .home {
+        margin-bottom: -250px;
     }
-}
 
-@media (max-width: 768px){
-    .home-text h1 {
-        font-size: 40px;
+    .selfie img{
+        width: 300px;
+        height: 300px;
+        margin-left: 50px;
     }
 
     .work{
         flex: 0 0 calc(50% - 20px);
+    }    
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .about {
+        margin-top: 20px;
+    }
+
+    .about p {
+        text-align: center;
+    }
+
+    .about-col1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px){    
+    .home-text h1, .home-text h3{
+        font-size: 21px;
+    }
+
+    .home {
+        margin-bottom: -250px;
+    }
+
+    .selfie img{
+        width: 300px;
+        height: 300px;
+        margin-left: 50px;
+    }
+
+    .work{
+        flex: 0 0 calc(50% - 20px);
+    }    
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .about-col1, .about-col2 {
+        flex-basis: 100%;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .about {
+        margin-top: 75px;
+    }
+
+    .about p {
+        text-align: center;
+    }
+
+    .about-col1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -759,10 +822,13 @@ nav .fa-solid{
 
     .work-slider {
         overflow: visible; /* Allow cards to adjust to full width */
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .slider-controls {
-        visibility: hidden;
+        display: none;
     }
 
     .home{
@@ -810,6 +876,10 @@ nav .fa-solid{
     .home-text h3 span{
         color: #66FCF1;
     }
+
+    .about {
+        margin-top: 300px;
+    }
     
     /*-----------------Home Selfie Image-----------------*/
     .selfie img{
@@ -819,9 +889,10 @@ nav .fa-solid{
         opacity: 0;
         animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
         animation-delay: 2s, 3s;
-        border-radius: 50%;
+        border-radius: 100%;
         box-shadow: 5px 10px 50px #66fcf1, -5px -5px 12px #45a29e;
         margin-top: 20px;
+        margin-right: 50px;
     }
 
 
@@ -875,9 +946,13 @@ nav .fa-solid{
         z-index: 2;
     }
 
+    .slider-controls {
+        margin-bottom: -150px;
+    }
+
 
     /*-----------------Home Hamburger Menu Icon-----------------*/
-    .subtitle, .subtitle2{
+    .subtitle{
         font-size: 42px;
     }
 
