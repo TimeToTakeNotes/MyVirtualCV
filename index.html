@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Arno Christie - Recent BSc Information Technology Graduate specializing in Software Development, Data Science, and AI.">
+        <meta name="keywords" content="Arno Christie, Portfolio, CV, Information Technology, Software Development, Data Science, AI, Web Development, Programmer, Recent Graduate">
+        <meta name="author" content="Arno Christie">
         <title>Arno Christie - Virtual CV</title>
         <link rel="stylesheet" href="style.css">
         <script defer  src="script.js"></script>
@@ -21,15 +24,15 @@
 
 
          <!-----------------Header Section----------------->
-            <header class="header">
+            <header class="header sticky">
                 <div class="container">
                     <nav class="navbar" role="navigation">
-                        <a href="#" class="logo">My Portfolio<span>.</span></a>
+                        <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>
                         <ul id="sidemenu" role="menu">
                             <i class="fa-solid fa-x" onclick="closemenu()"></i>
                             <li><a href="#header" class="nav-link" style="--i:1;">Home</a></li>
                             <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
-                            <li><a href="#services" class="nav-link" style="--i:3;">Skills</a></li>
+                            <li><a href="#specialization" class="nav-link" style="--i:3;">Specialization</a></li>
                             <li><a href="#work" class="nav-link" style="--i:4;">Work</a></li>
                             <li><a href="#contact" class="nav-link" style="--i:5;">Contact</a></li>
                         </ul>
@@ -47,7 +50,7 @@
                     <h3>A Recent Graduate, <br>Who is Also a <span class="mult-text"></span></h3>
                 </div>
                 <div class="selfie">
-                    <img src="images/Portrait.png">
+                    <img src="images/Portrait.png" alt="Portait of Arno Christie">
                 </div>
             </section>
         
@@ -57,7 +60,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col1">
-                        <img src="images/AboutImg.jpg" alt="About Me Image.">
+                        <img src="images/AboutImg.jpg" alt="Full body image of Arno Christie.">
                     </div>
                     <div class="about-col2">
                         <h1 class="subtitle">About Me</h1>
@@ -124,30 +127,36 @@
         </section>
 
 
-        <!-----------------Services/Skills Section----------------->
-        <section id="services" class="services">
+        <!-----------------specialization/Specialization Section----------------->
+        <section id="specialization" class="specialization">
             <div class="container">
-                <h1 class="subtitle2">My Skills</h1>
-                <div class="services-list">
+                <h1 class="subtitle2">Specialization</h1>
+                <div class="specialization-list">
                     <div>
                         <i class="fa-solid fa-code"></i>
                         <h2>Software Development</h2>
-                        <p>Leveraging my proficiency in Python, Java, and C#, I offer full-cycle software development services including design, 
-                             development, testing, and deployment to create robust and scalable software solutions.</p>
+                        <p class="specialization-desc">Leveraging my proficiency in Python, Java, Node.js, React, and Express, I specialize in full-cycle software 
+                            development. My expertise spans design, development, testing, and deployment, enabling me to create robust and 
+                            scalable software solutions. Additionally, I have a strong background in web development, ensuring user-friendly 
+                            and dynamic web applications.</p>
                         <!-- <a href="#">learn more</a> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-database"></i>
                         <h2>Database Management</h2>
-                         <p>Specializing in SQL querying and optimization, I offer comprehensive database management services including design, 
-                             normalization, and maintenance to ensure your databases are efficient, secure, and scalable.</p>
+                         <p class="specialization-desc">Leveraging my expertise in SQL querying and optimization, I specialize in comprehensive database management. 
+                            With a strong background in MySQL, Oracle, and MS SQL Server, I focus on database design, normalization, and 
+                            maintenance to ensure your databases are efficient, secure, and scalable.</p>
                         <!-- <a href="#">learn more</a> -->
                     </div>
                     <div>
-                        <i class="fa-brands fa-html5"></i>
-                        <h2>Web Development</h2>
-                        <p>Specializing in HTML, CSS, and JavaScript, I offer responsive web development services to create dynamic, 
-                            user-friendly websites and web applications tailored to meet your business needs and enhance user experience.</p>
+                        <i class="fa-solid fa-robot"></i>
+                        <h2>AI Integration in Development</h2>
+                        <p class="specialization-desc">I have a deep passion for artificial intelligence technology and its transformative potential. With hands-on 
+                            experience in AI-driven solutions, I am enthusiastic about the possibilities of integrating AI into my software 
+                            development projects. I hope to leverage AI to create innovative, intelligent, and user-centric applications that 
+                            address real-world challenges. My goal is to continue exploring AI advancements and incorporate them into my 
+                            development process to deliver cutting-edge solutions.</p>
                         <!-- <a href="#">learn more</a> -->
                     </div>
                 </div>
@@ -159,65 +168,69 @@
         <section id="work">
             <div class="container">
                 <h1 class="subtitle2">My Work</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/FlappyBirdClone.jpg" alt="Flappy Bird Clone">
-                        <div class="layer">
-                            <h3>Flappy Bird Clone</h3>
-                            <p>Flappy Bird Clone Written in Python using Pygame.</p>
-                            <a href="https://github.com/TimeToTakeNotes/flappy_bird.git"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                <div class="work-slider">
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="images/FlappyBirdClone.jpg" alt="Flappy Bird Clone">
+                            <div class="layer">
+                                <h3>Flappy Bird Clone</h3>
+                                <p>Flappy Bird Clone Written in Python using Pygame.</p>
+                                <a href="https://github.com/TimeToTakeNotes/flappy_bird.git"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                            </div>
                         </div>
+                        <div class="work">
+                            <img src="images/RockPaperScissors.jpeg" alt="Rock Paper Scissors">
+                            <div class="layer">
+                                <h3>Rock Paper Scissors</h3>
+                                <p>A Rock Paper Scissors Game Written in HTML, CSS, & JavaScript.</p>
+                                <a href="https://github.com/TimeToTakeNotes/Rock_Paper_Scissors.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                                <a href="https://timetotakenotes.github.io/rock-paper-scissors/"><i class="fa-solid fa-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="images/QRCodeGenerator.png" alt="QR Code Generator">
+                            <div class="layer">
+                                <h3>QR Code Generator</h3>
+                                <p>A Simple QR Code Generator Web App with JavaScript, CSS and QRcode.js.</p>
+                                <a href="https://github.com/TimeToTakeNotes/QR-Code-Generator.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                                <a href="https://timetotakenotes.github.io/QR-Code-Generator/"><i class="fa-solid fa-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="images/HMSGroupProject.png" alt="HMS Group Project Web Application">
+                            <div class="layer">
+                                <h3>HMS Group Project Web Application</h3>
+                                <p>A multi-platform application designed to help lecturers in the Human Movement Sciences Faculty provide 
+                                    faster and more effective feedback to students. The system allows students to upload video assignments and 
+                                    receive text-based feedback, deveoped using Node.js with React, Flutter, MySQL, etc.</p>
+                                <a href="https://github.com/JasonErasmus264/hms_app_marvellous_machines"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="images/NotesApp.png" alt="Full Stack React Node Notes App">
+                            <div class="layer">
+                                <h3>Full Stack React Node Notes App</h3>
+                                <p>A note-taking web application built with a robust tech stack of Node.js, React, TypeScript, and MySQL. Designed 
+                                    for seamless user experience, the app features advanced speech-to-text functionality powered by OpenAI's 
+                                    Whisper, enabling users to transcribe thoughts into notes effortlessly.</p>
+                                <a href="https://github.com/TimeToTakeNotes/notes-app"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <!-- <div class="work">
+                            <img src="" alt="Future Project...">
+                            <div class="layer">
+                                <h3>To be continued...</h3>
+                                <p></p>
+                                <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div> -->
                     </div>
-                    <div class="work">
-                        <img src="images/RockPaperScissors.jpeg" alt="Rock Paper Scissors">
-                        <div class="layer">
-                            <h3>Rock Paper Scissors</h3>
-                            <p>A Rock Paper Scissors Game Written in HTML, CSS, & JavaScript.</p>
-                            <a href="https://github.com/TimeToTakeNotes/Rock_Paper_Scissors.git"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            <a href="https://timetotakenotes.github.io/rock-paper-scissors/"><i class="fa-solid fa-play"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/QRCodeGenerator.png" alt="QR Code Generator">
-                        <div class="layer">
-                            <h3>QR Code Generator</h3>
-                            <p>A Simple QR Code Generator Web App with JavaScript, CSS and QRcode.js.</p>
-                            <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                            <a href="https://timetotakenotes.github.io/QR-Code-Generator/"><i class="fa-solid fa-play"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/HMSGroupProject.png" alt="HMS Group Project Web Application">
-                        <div class="layer">
-                            <h3>HMS Group Project Web Application</h3>
-                            <p>A multi-platform application designed to help lecturers in the Human Movement Sciences Faculty provide 
-                                faster and more effective feedback to students. The system allows students to upload video assignments and 
-                                receive text-based feedback, deveoped using Node.js with React, Flutter, MySQL, etc.</p>
-                            <a href="https://github.com/JasonErasmus264/hms_app_marvellous_machines"><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/NotesApp.png" alt="Full Stack React Node Notes App">
-                        <div class="layer">
-                            <h3>Full Stack React Node Notes App</h3>
-                            <p>A note-taking web application built with a robust tech stack of Node.js, React, TypeScript, and MySQL. Designed 
-                                for seamless user experience, the app features advanced speech-to-text functionality powered by OpenAI's 
-                                Whisper, enabling users to transcribe thoughts into notes effortlessly.</p>
-                            <a href="https://github.com/TimeToTakeNotes/notes-app"><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <!-- <div class="work">
-                        <img src="" alt="Future Project...">
-                        <div class="layer">
-                            <h3>To be continued...</h3>
-                            <p></p>
-                            <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div> -->
-            </div>
-            <div class="row">
-                <a class="btn btn-next"><i class="fa-solid fa-arrow-left"></i></a> 
-                <a class="btn btn-pre"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="slider-controls">
+                <a class="btn btn-prev"><i class="fa-solid fa-arrow-left"></i></a> 
+                <a class="btn btn-next"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </section>
 
@@ -228,8 +241,8 @@
                 <div class="row">
                     <div class="contact-left">
                         <h1 class="subtitle2">Contact Me</h1>
-                        <p><a href="mailto:arno.christie@gmail.com"><i class="fas fa-paper-plane"></i></a> arno.christie@gmail.com</p>
-                        <p><a href="tel:(082)654-2130"><i class="fas fa-phone-square-alt"></i></a> (+27) 082 654 2130</p>
+                        <p><a href="mailto:arno.christie@gmail.com"><i class="fas fa-paper-plane"></i></a>arno.christie@gmail.com</p>
+                        <p><a href="tel:(082)654-2130"><i class="fas fa-phone-square-alt"></i></a>(+27) 082 654 2130</p>
                         <div class="social-icons">
                             <a href="https://www.facebook.com/arno.christie/"><i class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.instagram.com/arno.christie/"><i class="fa-brands fa-instagram"></i></a>

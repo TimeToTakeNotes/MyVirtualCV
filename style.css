@@ -7,7 +7,6 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-
 }
 
 html{
@@ -24,6 +23,16 @@ body{
 #header{
     width: 100%;
     height: 100vh;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container{
@@ -64,7 +73,7 @@ nav{
     margin: 10px 20px;
 }
 
-.navbar ul li a{
+.nav-link{
     display: inline-block;
     color: #fff;
     text-decoration: none;
@@ -93,7 +102,7 @@ nav{
     
 } */
 
-.navbar ul li a::after{
+.nav-link::after{
     content: "";
     width: 100%;
     height: 3px;
@@ -108,9 +117,14 @@ nav{
     transition: transform 0.3s ease;
 }
 
-.navbar ul li a:hover::after{
+.nav-link:hover::after{
     transform: scaleX(1); /*Reveal on hover*/
     transform-origin: left;
+}
+
+.nav-link:hover {
+    color: #66fcf1;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 /* .navbar ul li a::after{
@@ -403,7 +417,7 @@ nav{
 }
    
 
-/*-----------------Services Section-----------------*/
+/*-----------------specialization Section-----------------*/
 .subtitle2{
     font-size: 60px;
     font-weight: 600;
@@ -413,18 +427,18 @@ nav{
 }
 
 
-#services{
+#specialization{
     padding: 30px 0;
 }
 
-.services-list{
+.specialization-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
 
-.services-list div{
+.specialization-list div{
     background: #1f2833;
     padding: 40px;
     font-size: 13px;
@@ -433,18 +447,18 @@ nav{
     transition: background 0.5s transform 0.5s;
 }
 
-.services-list div i{
+.specialization-list div i{
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.services-list div h2{
+.specialization-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a{
+.specialization-list div a{
     text-decoration: none;
     color: #fff;
     font-size: 12px;
@@ -452,9 +466,13 @@ nav{
     display: inline-block;
 }
 
-.services-list div:hover{
+.specialization-list div:hover{
     background: #45A29E;
     transform: translateY(-10px);
+}
+
+.specialization-desc {
+    font-size: 16px;
 }
 
 
@@ -464,21 +482,27 @@ nav{
 }
 
 .work-list{
+    margin-top: 40px;
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    scroll-behavior: smooth;
-    overflow-x: auto;
-    margin-top: 50px;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.work-slider {
+    overflow: hidden;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .work{
-    flex: 0 0 auto;
-    width: 435px;
-    height: 350px;
-    margin-right: 40px;
-    border-radius: 10px;
-    position: relative;
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
     overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .work img{
@@ -561,6 +585,31 @@ nav{
     height: 100%;
 }
 
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.slider-controls .btn {
+    border-width: 2px;
+    border-color: #66fcf1;
+    background: #0b0c10;
+    color: #66fcf1;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 32px;
+    transition: background 0.3s ease;
+}
+
+.slider-controls .btn:hover {
+    background: #45A29E;
+}
+
+
+/*-----------------General Buttons-----------------*/
 .btn{
     display: block;
     margin: 50px auto;
@@ -578,13 +627,12 @@ nav{
     background: #66fcf1;
 }
 
-.btn-next, .btn-pre{
-    border-radius: 100% !important;
-    padding: 20px !important;
-}
-
 
 /*-----------------Contact Section-----------------*/
+#contact {
+    text-align: center;
+}
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -672,6 +720,8 @@ form .btn2{
 
 
 
+
+
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------CSS for Small Screens-----------------*/
 nav .fa-solid{
@@ -682,6 +732,10 @@ nav .fa-solid{
     .home-text h1 {
         font-size: 50px;
     }
+
+    .work {
+        flex: 0 0 calc(50% - 20px);
+    }
 }
 
 @media (max-width: 768px){
@@ -690,17 +744,27 @@ nav .fa-solid{
     }
 
     .work{
-        flex: 0 0 auto;
-        width: 100%;
-        height: 300px;
-        margin-right: 40px;
-        border-radius: 10px;
-        position: relative;
-        overflow: hidden;
+        flex: 0 0 calc(50% - 20px);
     }
 }
 
 @media only screen and (max-width: 600px){
+    .work {
+        flex: 0 0 calc(100% - 20px); /* One card per row */
+    }
+    
+    .work-list {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .work-slider {
+        overflow: visible; /* Allow cards to adjust to full width */
+    }
+
+    .slider-controls {
+        visibility: hidden;
+    }
+
     .home{
         width: 100%;
         height: auto;
