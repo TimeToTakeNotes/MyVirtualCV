@@ -1,111 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Arno Christie - Recent BSc Information Technology Graduate specializing in Software Development, Data Science, and AI.">
-        <meta name="keywords" content="Arno Christie, Portfolio, CV, Information Technology, Software Development, Data Science, AI, Web Development, Programmer, Recent Graduate">
-        <meta name="author" content="Arno Christie">
-        <title>Arno Christie - Virtual CV</title>
-        <link rel="stylesheet" href="style.css">
-        <script defer  src="script.js"></script>
-        <script defer  src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!--For typing animation in header text-->
-        <script defer src="https://kit.fontawesome.com/c47759d4b5.js" crossorigin="anonymous"></script> <!--For using cool icons-->
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Arno Christie - Recent BSc Information Technology Graduate specializing in Software Development, Data Science, and AI.">
+    <meta name="keywords"
+        content="Arno Christie, Portfolio, CV, Information Technology, Software Development, Data Science, AI, Web Development, Programmer, Recent Graduate">
+    <meta name="author" content="Arno Christie">
+    <title>Arno Christie - Virtual CV</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--For typing animation in header text-->
+    <script defer src="https://kit.fontawesome.com/c47759d4b5.js" crossorigin="anonymous"></script>
+    <!--For using cool icons-->
+</head>
 
 
-    <body>
-        <!-----------------Pre Loader----------------->    
-        <!-- <div class="preloader">
+<body>
+    <!-----------------Pre Loader----------------->
+    <!-- <div class="preloader">
             <span class="preloader-text">loading</span>
             <span class="preload"></span>
         </div> -->
 
 
-         <!-----------------Header Section----------------->
-            <header class="header sticky">
-                <div class="container">
-                    <nav class="navbar" role="navigation">
-                        <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>
-                        <ul id="sidemenu" role="menu">
-                            <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                            <li><a href="#home" class="nav-link" style="--i:1;">Home</a></li>
-                            <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
-                            <li><a href="#specialization" class="nav-link" style="--i:3;">Specialization</a></li>
-                            <li><a href="#work" class="nav-link" style="--i:4;">Work</a></li>
-                            <li><a href="#contact" class="nav-link" style="--i:5;">Contact</a></li>
-                        </ul>
-                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>            
-                    </nav>
-                </div>
-            </header>
+    <!-----------------Header Section----------------->
+    <header class="header sticky">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>    
+                <ul id="sidemenu" role="menu">
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    <li><a href="#home" class="nav-link" style="--i:1;">Home</a></li>
+                    <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
+                    <li><a href="#specialization" class="nav-link" style="--i:3;">Specialization</a></li>
+                    <li><a href="#work" class="nav-link" style="--i:4;">Work</a></li>
+                    <li><a href="#contact" class="nav-link" style="--i:5;">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
 
 
-            <!-----------------Home Section----------------->
-            <section id="home" class="home">
-                <div class="home-text">
-                    <h3>Hello, It's Me</h3>
-                    <h1>Arno Christie</h1>
-                    <h3>A Recent Graduate, <br>Who is Also a <span class="mult-text"></span></h3>
-                </div>
-                <div class="selfie">
-                    <img src="images/Portrait.png" alt="Portait of Arno Christie">
-                </div>
-            </section>
-        
+    <!-----------------Home Section----------------->
+    <section id="home" class="home">
+        <div class="home-text">
+            <h3>Hello, It's Me</h3>
+            <h1>Arno Christie</h1>
+            <h3>A Recent Graduate, <br>Who is Also a <br>
+                <span class="mult-text-container"><span class="mult-text"></span></span>
+            </h3>
+        </div>
+        <div class="selfie">
+            <img src="images/Portrait.png" alt="Portait of Arno Christie">
+        </div>
+    </section>
 
-        <!-----------------About Section----------------->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row">
+
+    <!-----------------About Section----------------->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-subtitle">
+                    <h1 class="subtitle">About Me</h1>
+                </div>
+                <div class="about-content">
                     <div class="about-col1">
                         <img src="images/AboutImg.jpg" alt="Full body image of Arno Christie.">
                     </div>
                     <div class="about-col2">
-                        <h1 class="subtitle">About Me</h1>
-                        <p>I am a third-year BSc Information Technology student at North-West University, driven by a profound passion 
-                            for technology and programming. My proficiency extends to Python, Java, and SQL. My diverse interests within 
-                            IT span software development, data science, cybersecurity, and artificial intelligence.
-
-                            <br>Committed to leveraging technology to drive innovation and positive societal impact, I aim to contribute 
-                            to projects that foster technological advancement and practical solutions for real-world problems
-                        
+                        <p> BSc in Information Technology graduate with distinction (86.3% average) from North-West
+                            University. Skilled in
+                            Python, Java, and SQL, with hands-on experience in software development, data analysis, and
+                            AI-driven solutions.
+                            <br>
+                            <br>Proven ability to deliver innovative, user-focused projects, such as a multi-platform
+                            student feedback system adopted
+                            by the university. Passionate about solving real-world challenges through technology.
+    
                         </p>
                         <!-- <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
-                        </div>
-                         -->
-
-                        
+                                <p class="tab-links active-link">Skills</p>
+                                <p class="tab-links">Experience</p>
+                                <p class="tab-links">Education</p>
+                            </div>
+                             -->
+    
+    
                         <!-----------------About Section's Radio Btn----------------->
                         <div class="radio-inputs">
                             <label class="radio">
-                              <input type="radio" name="radio" id="skills-radio" onclick="opentab('skills-content')" checked="" />
-                              <span class="name">Skills</span>
+                                <input type="radio" name="radio" id="skills-radio" onclick="opentab('skills-content')"
+                                    checked="" />
+                                <span class="name">Skills</span>
                             </label>
                             <label class="radio">
-                              <input type="radio" name="radio" id="experience-radio" onclick="opentab('experience-content')"/>
-                              <span class="name">Experience</span>
+                                <input type="radio" name="radio" id="experience-radio"
+                                    onclick="opentab('experience-content')" />
+                                <span class="name">Experience</span>
                             </label>
-                          
                             <label class="radio">
-                              <input type="radio" name="radio" id="education-radio" onclick="opentab('education-content')"/>
-                              <span class="name">Education</span>
+                                <input type="radio" name="radio" id="education-radio"
+                                    onclick="opentab('education-content')" />
+                                <span class="name">Education</span>
                             </label>
-                          </div>
-                        
-                          <div id="skills-content" class="tab-content active-tab">
+                            <label class="radio">
+                                <input type="radio" name="radio" id="achievements-radio"
+                                    onclick="opentab('achievements-content')" />
+                                <span class="name">Achievements</span>
+                            </label>
+                        </div>
+    
+                        <div id="skills-content" class="tab-content active-tab">
                             <ul>
                                 <li><span>Languages</span><br>Afrikaans (Native), English (Fluent), German (Basic).</li>
                                 <li><span>Programming Languages</span><br>Python, C#, Java, HTML, CSS, and JavaScript.</li>
-                                <li><span>Database Management</span><br>SQL Querying and Optimization, Relational Databases (e.g., MySQL, 
+                                <li><span>Database Management</span><br>SQL Querying and Optimization, Relational Databases
+                                    (e.g., MySQL,
                                     Microsoft SQL Server), Database Design and Normalization, Data Warehousing.</li>
-                                <li><span>Software Development</span><br>Object-Oriented Programming (OOP), Version Control Systems 
-                                    (e.g., Git), Software Development Life Cycle, Agile Methodologies, Test-Driven Development.</li>
-                                <li><span>Soft Skills</span><br>Problem Solver, Communication, Adaptability, Attention to Detail, Time 
+                                <li><span>Software Development</span><br>Object-Oriented Programming (OOP), Version Control
+                                    Systems
+                                    (e.g., Git), Software Development Life Cycle, Agile Methodologies, Test-Driven
+                                    Development.</li>
+                                <li><span>Soft Skills</span><br>Problem Solver, Communication, Adaptability, Attention to
+                                    Detail, Time
                                     Management, Teamwork, Critical Thinking, Emotional Intelligence.</li>
                             </ul>
                         </div>
@@ -116,107 +139,147 @@
                         </div>
                         <div id="education-content" class="tab-content">
                             <ul>
-                                <li><span>BSc. in Information Technology&emsp;&emsp;&emsp;[Jan 2022 - Dec 2024]</span><br>North-West University</li>
-                                <li><span>National Senior Certificate&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Graduation Year: 2020]</span><br>Hoërskool Riebeeckrand</li>
+                                <li>
+                                    <div class="flex-container">
+                                        <span class="flex-item">BSc. in Information Technology</span>
+                                        <span class="flex-item">[Jan 2022 - Dec 2024]</span>
+                                        <span class="flex-item">North-West University</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex-container">
+                                        <span class="flex-item">National Senior Certificate</span>
+                                        <span class="flex-item">[Graduation Year: 2020]</span>
+                                        <span class="flex-item">Hoërskool Riebeeckrand</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="achievements-content" class="tab-content">
+                            <ul>
+                                <li><span>BSc. in Information Technology&emsp;&emsp;&emsp;[Jan 2022 - Dec
+                                        2024]</span><br>North-West University</li>
+                                <li><span>National Senior Certificate&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Graduation Year:
+                                        2020]</span><br>Hoërskool Riebeeckrand</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-----------------specialization/Specialization Section----------------->
-        <section id="specialization" class="specialization">
-            <div class="container">
-                <h1 class="subtitle">Specialization</h1>
-                <div class="specialization-list">
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Software Development</h2>
-                        <p class="specialization-desc">Leveraging my proficiency in Python, Java, Node.js, React, and Express, I specialize in full-cycle software 
-                            development. My expertise spans design, development, testing, and deployment, enabling me to create robust and 
-                            scalable software solutions. Additionally, I have a strong background in web development, ensuring user-friendly 
-                            and dynamic web applications.</p>
-                        <!-- <a href="#">learn more</a> -->
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-database"></i>
-                        <h2>Database Management</h2>
-                         <p class="specialization-desc">Leveraging my expertise in SQL querying and optimization, I specialize in comprehensive database management. 
-                            With a strong background in MySQL, Oracle, and MS SQL Server, I focus on database design, normalization, and 
-                            maintenance to ensure your databases are efficient, secure, and scalable.</p>
-                        <!-- <a href="#">learn more</a> -->
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-robot"></i>
-                        <h2>AI Integration in Development</h2>
-                        <p class="specialization-desc">I have a deep passion for artificial intelligence technology and its transformative potential. With hands-on 
-                            experience in AI-driven solutions, I am enthusiastic about the possibilities of integrating AI into my software 
-                            development projects. I hope to leverage AI to create innovative, intelligent, and user-centric applications that 
-                            address real-world challenges. My goal is to continue exploring AI advancements and incorporate them into my 
-                            development process to deliver cutting-edge solutions.</p>
-                        <!-- <a href="#">learn more</a> -->
-                    </div>
+    <!-----------------specialization/Specialization Section----------------->
+    <section id="specialization" class="specialization">
+        <div class="container">
+            <h1 class="subtitle">Specialization</h1>
+            <div class="specialization-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Software Development</h2>
+                    <p class="specialization-desc">Leveraging my proficiency in Python, Java, Node.js, React, and
+                        Express, I specialize in full-cycle software
+                        development. My expertise spans design, development, testing, and deployment, enabling me to
+                        create robust and
+                        scalable software solutions. Additionally, I have a strong background in web development,
+                        ensuring user-friendly
+                        and dynamic web applications.</p>
+                    <!-- <a href="#">learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Management</h2>
+                    <p class="specialization-desc">Leveraging my expertise in SQL querying and optimization, I
+                        specialize in comprehensive database management.
+                        With a strong background in MySQL, Oracle, and MS SQL Server, I focus on database design,
+                        normalization, and
+                        maintenance to ensure your databases are efficient, secure, and scalable.</p>
+                    <!-- <a href="#">learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>AI Integration in Development</h2>
+                    <p class="specialization-desc">I have a deep passion for artificial intelligence technology and its
+                        transformative potential. With hands-on
+                        experience in AI-driven solutions, I am enthusiastic about the possibilities of integrating AI
+                        into my software
+                        development projects. I hope to leverage AI to create innovative, intelligent, and user-centric
+                        applications that
+                        address real-world challenges. My goal is to continue exploring AI advancements and incorporate
+                        them into my
+                        development process to deliver cutting-edge solutions.</p>
+                    <!-- <a href="#">learn more</a> -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-----------------Work Section----------------->
-        <section id="work">
-            <div class="container">
-                <h1 class="subtitle">My Work</h1>
-                <div class="work-slider">
-                    <div class="work-list">
-                        <div class="work">
-                            <img src="images/FlappyBirdClone.jpg" alt="Flappy Bird Clone">
-                            <div class="layer">
-                                <h3>Flappy Bird Clone</h3>
-                                <p>Flappy Bird Clone Written in Python using Pygame.</p>
-                                <a href="https://github.com/TimeToTakeNotes/flappy_bird.git"><i class="fa-solid fa-up-right-from-square"></i></i></a>
-                            </div>
+    <!-----------------Work Section----------------->
+    <section id="work">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-slider">
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/HMSGroupProject.png" alt="HMS Group Project Web Application">
+                        <div class="layer">
+                            <h3>HMS Group Project Web Application</h3>
+                            <p>A multi-platform application designed to help lecturers in the Human Movement Sciences
+                                Faculty provide
+                                faster and more effective feedback to students. The system allows students to upload
+                                video assignments and
+                                receive text-based feedback, deveoped using Node.js with React, Flutter, MySQL, etc.</p>
+                            <a href="https://github.com/JasonErasmus264/hms_app_marvellous_machines"><i
+                                    class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
-                        <div class="work">
-                            <img src="images/RockPaperScissors.jpeg" alt="Rock Paper Scissors">
-                            <div class="layer">
-                                <h3>Rock Paper Scissors</h3>
-                                <p>A Rock Paper Scissors Game Written in HTML, CSS, & JavaScript.</p>
-                                <a href="https://github.com/TimeToTakeNotes/Rock_Paper_Scissors.git"><i class="fa-solid fa-up-right-from-square"></i></a>
-                                <a href="https://timetotakenotes.github.io/rock-paper-scissors/"><i class="fa-solid fa-play"></i></a>
-                            </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/NotesApp.png" alt="Full Stack React Node Notes App">
+                        <div class="layer">
+                            <h3>Full Stack React Node Notes App</h3>
+                            <p>A note-taking web application built with a robust tech stack of Node.js, React,
+                                TypeScript, and MySQL. Designed
+                                for seamless user experience, the app features advanced speech-to-text functionality
+                                powered by OpenAI's
+                                Whisper, enabling users to transcribe thoughts into notes effortlessly.</p>
+                            <a href="https://github.com/TimeToTakeNotes/notes-app"><i
+                                    class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
-                        <div class="work">
-                            <img src="images/QRCodeGenerator.png" alt="QR Code Generator">
-                            <div class="layer">
-                                <h3>QR Code Generator</h3>
-                                <p>A Simple QR Code Generator Web App with JavaScript, CSS and QRcode.js.</p>
-                                <a href="https://github.com/TimeToTakeNotes/QR-Code-Generator.git"><i class="fa-solid fa-up-right-from-square"></i></a>
-                                <a href="https://timetotakenotes.github.io/QR-Code-Generator/"><i class="fa-solid fa-play"></i></a>
-                            </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/FlappyBirdClone.jpg" alt="Flappy Bird Clone">
+                        <div class="layer">
+                            <h3>Flappy Bird Clone</h3>
+                            <p>Flappy Bird Clone Written in Python using Pygame.</p>
+                            <a href="https://github.com/TimeToTakeNotes/flappy_bird.git"><i
+                                    class="fa-solid fa-up-right-from-square"></i></i></a>
                         </div>
-                        <div class="work">
-                            <img src="images/HMSGroupProject.png" alt="HMS Group Project Web Application">
-                            <div class="layer">
-                                <h3>HMS Group Project Web Application</h3>
-                                <p>A multi-platform application designed to help lecturers in the Human Movement Sciences Faculty provide 
-                                    faster and more effective feedback to students. The system allows students to upload video assignments and 
-                                    receive text-based feedback, deveoped using Node.js with React, Flutter, MySQL, etc.</p>
-                                <a href="https://github.com/JasonErasmus264/hms_app_marvellous_machines"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/RockPaperScissors.jpeg" alt="Rock Paper Scissors">
+                        <div class="layer">
+                            <h3>Rock Paper Scissors</h3>
+                            <p>A Rock Paper Scissors Game Written in HTML, CSS, & JavaScript.</p>
+                            <a href="https://github.com/TimeToTakeNotes/Rock_Paper_Scissors.git"><i
+                                    class="fa-solid fa-up-right-from-square"></i></a>
+                            <a href="https://timetotakenotes.github.io/rock-paper-scissors/"><i
+                                    class="fa-solid fa-play"></i></a>
                         </div>
-                        <div class="work">
-                            <img src="images/NotesApp.png" alt="Full Stack React Node Notes App">
-                            <div class="layer">
-                                <h3>Full Stack React Node Notes App</h3>
-                                <p>A note-taking web application built with a robust tech stack of Node.js, React, TypeScript, and MySQL. Designed 
-                                    for seamless user experience, the app features advanced speech-to-text functionality powered by OpenAI's 
-                                    Whisper, enabling users to transcribe thoughts into notes effortlessly.</p>
-                                <a href="https://github.com/TimeToTakeNotes/notes-app"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/QRCodeGenerator.png" alt="QR Code Generator">
+                        <div class="layer">
+                            <h3>QR Code Generator</h3>
+                            <p>A Simple QR Code Generator Web App with JavaScript, CSS and QRcode.js.</p>
+                            <a href="https://github.com/TimeToTakeNotes/QR-Code-Generator.git"><i
+                                    class="fa-solid fa-up-right-from-square"></i></a>
+                            <a href="https://timetotakenotes.github.io/QR-Code-Generator/"><i
+                                    class="fa-solid fa-play"></i></a>
                         </div>
-                        <!-- <div class="work">
+                    </div>
+                    <!-- <div class="work">
                             <img src="" alt="Future Project...">
                             <div class="layer">
                                 <h3>To be continued...</h3>
@@ -224,49 +287,57 @@
                                 <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
                             </div>
                         </div> -->
-                    </div>
                 </div>
-                
-                <div class="slider-controls">
-                <a class="btn btn-prev"><i class="fa-solid fa-arrow-left"></i></a> 
+            </div>
+
+            <div class="slider-controls">
+                <a class="btn btn-prev"><i class="fa-solid fa-arrow-left"></i></a>
                 <a class="btn btn-next"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-----------------Contact Section----------------->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-row">
+                <div class="contact-left aligned">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><a href="mailto:arno.christie@gmail.com"><i
+                                class="fas fa-paper-plane"></i></a>arno.christie@gmail.com</p>
+                    <p><a href="tel:(082)654-2130"><i class="fas fa-phone-square-alt"></i></a>(+27) 082 654 2130</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/arno.christie/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/arno.christie/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/arno-christie-5003a1209/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/TimeToTakeNotes"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/ArnoChristie-CV.pdf" download class="btn download-btn">Download CV</a>
+                    <div class="progress-bar"></div>
+                    <svg x="0px" y="0px" viewBox="0 0 25 30">
+                        <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2" />
+                    </svg>
+
+                </div>
+                <div class="contact-right aligned">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
-        </section>
+        </div>
 
 
-        <!-----------------Contact Section----------------->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left aligned">
-                        <h1 class="subtitle">Contact Me</h1>
-                        <p><a href="mailto:arno.christie@gmail.com"><i class="fas fa-paper-plane"></i></a>arno.christie@gmail.com</p>
-                        <p><a href="tel:(082)654-2130"><i class="fas fa-phone-square-alt"></i></a>(+27) 082 654 2130</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/arno.christie/"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/arno.christie/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/arno-christie-5003a1209/"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/TimeToTakeNotes"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                        <a href="images/ArnoChristie-CV.pdf" download class="btn btn2">Download CV</a>
-                    </div>
-                    <div class="contact-right aligned">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
-                </div>
-            </div>
+        <footer class="copyright">
+            <p>&copy; 2025 Arno Christie. All Rights Reserved.</p>
+        </footer>
+    </section>
+</body>
 
-            
-            <footer class="copyright">
-                <p>&copy; 2025 Arno Christie. All Rights Reserved.</p>
-            </footer>
-        </section>
-    </body>
 </html>
