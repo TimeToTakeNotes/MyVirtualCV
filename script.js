@@ -32,6 +32,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
+    // -------- Sticky Navbar-------- //
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        const header = document.querySelector(".header");
+
+        let topScreen = 0;
+
+        if (window.innerWidth > 1024) {
+            topScreen = 40;
+        } else if (window.innerWidth > 768) {
+            topScreen = 80;
+        } else if (window.innerWidth > 600) {
+            topScreen = 70;
+        }
+
+        if (window.innerWidth > 600) {
+            const headerOffset = header.offsetTop;
+
+            if (window.scrollY >= headerOffset + topScreen) {
+                navbar.classList.add("sticky"); // Make it fixed when reaching the top
+            } else {
+                navbar.classList.remove("sticky"); // Revert back when scrolling up
+            }
+        } else {
+            // Ensure it stays fixed for smaller screens and doesn't remove styles
+            navbar.classList.remove("sticky");
+        }
+    });
+
+
     // -------- Preloader -------- //
     const initPreloader = () => {
         const preloader = document.querySelector('.preloader');

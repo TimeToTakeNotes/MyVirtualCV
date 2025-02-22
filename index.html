@@ -29,11 +29,11 @@
 
 
     <!-----------------Header Section----------------->
-    <header class="header sticky">
+    <header class="header">
         <div class="container">
-            <nav class="navbar" role="navigation">
-                <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>    
-                <ul id="sidemenu" role="menu">
+            <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>
+            <nav class="navbar sticky" role="navigation"> 
+                <ul id="sidemenu" role="list">
                     <i class="fa-solid fa-x" onclick="closemenu()"></i>
                     <li><a href="#home" class="nav-link" style="--i:1;">Home</a></li>
                     <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
@@ -141,26 +141,35 @@
                             <ul>
                                 <li>
                                     <div class="flex-container">
-                                        <span class="flex-item">BSc. in Information Technology</span>
-                                        <span class="flex-item">[Jan 2022 - Dec 2024]</span>
-                                        <span class="flex-item">North-West University</span>
+                                        <div class="flex-left">
+                                            <span class="flex-item">BSc. in Information Technology</span>
+                                            <a class="flex-item">North-West University</a>
+                                        </div>
+                                        <div class="flex-right">
+                                            <span class="flex-item">[Jan 2022 - Dec 2024]</span>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="flex-container">
-                                        <span class="flex-item">National Senior Certificate</span>
-                                        <span class="flex-item">[Graduation Year: 2020]</span>
-                                        <span class="flex-item">Hoërskool Riebeeckrand</span>
+                                        <div class="flex-left">
+                                            <span class="flex-item">National Senior Certificate</span>
+                                            <a class="flex-item">Hoërskool Riebeeckrand</a>
+                                        </div>
+                                        <div class="flex-right">
+                                            <span class="flex-item">[Graduation Year: 2020]</span>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div id="achievements-content" class="tab-content">
                             <ul>
-                                <li><span>BSc. in Information Technology&emsp;&emsp;&emsp;[Jan 2022 - Dec
-                                        2024]</span><br>North-West University</li>
-                                <li><span>National Senior Certificate&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Graduation Year:
-                                        2020]</span><br>Hoërskool Riebeeckrand</li>
+                                <li><span>University-Adopted Multi-Platform Student Feedback App</span><br>Final year group multi-platform student 
+                                    feedback app was recognized as the best project among finalist groups, leading to adoption by the university 
+                                    for integration into their HMS systems for use by students and lecturers.</li>
+                                <li><span>Golden Key International Honour Society Member</span><br>Top 15% of highest-performing students at North-West
+                                    University, recognized for academic excellence.</li>
                             </ul>
                         </div>
                     </div>
@@ -323,8 +332,8 @@
                 </div>
                 <div class="contact-right aligned">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your email" required>
+                        <input type="text" name="Name" placeholder="Your name" autocomplete="name">
+                        <input type="email" name="Email" placeholder="Your email" autocomplete="email" required>
                         <textarea name="Message" rows="6" placeholder="Your message"></textarea>
                         <button type="submit" class="btn">Submit</button>
                     </form>
