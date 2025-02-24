@@ -31,6 +31,10 @@ body {
 
 }
 
+section {
+    margin-top: 25px;
+}
+
 /*-----------------General Buttons-----------------*/
 .btn {
     display: block;
@@ -49,6 +53,54 @@ body {
 .btn:hover {
     background: #66fcf1;
     color: #0b0c10;
+}
+
+/*-----------------Pre Loader-----------------*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.main-content {
+    /*Hide main content at start*/
+    display: none;
+}
+
+.preloader-text {
+    margin-bottom: 20px;
+    color: #0b0c10;
+    animation: text_713 3.5s ease both infinite;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.preload {
+    position: relative;
+    background-color: #45a29e;
+    border-radius: 50px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    animation: loading_713 3.5s ease both infinite;
+}
+
+.preload::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #66fcf1;
+    border-radius: inherit;
+    animation: loading2_713 3.5s ease both infinite;
 }
 
 /*-----------------Header Section-----------------*/
@@ -72,9 +124,7 @@ body {
     font-weight: 600;
     cursor: default;
     opacity: 0;
-    /*Logo will start hidden*/
     animation: slideRight 1s ease forwards;
-    /*Logo slide in animation*/
     background: linear-gradient(to right, #fff, #66FCF1);
     background-clip: text;
     color: transparent;
@@ -128,16 +178,38 @@ body {
     opacity: 0;
     position: relative;
     animation: slideTop 1s ease forwards;
-    /*menu slide in animation*/
     animation-delay: calc(.2s * var(--i));
-    /*Delay based on index*/
+}
+
+.nav-link.active {
+    color: #66fcf1; /* Example: Change color */
+    font-weight: bold;
+}
+
+.nav-link.active::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 25px;
+    transform: scaleX(0);
+    background: #66FCF1;
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+    /*Reveal on hover*/
+    transform-origin: left;
 }
 
 .nav-link::after {
     content: "";
     width: 100%;
     height: 3px;
-    background: #1d9c94;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -159,7 +231,7 @@ body {
     transition: color 0.3s, text-decoration 0.3s;
 }
 
-/*-----------------Burger Menu Styles-----------------*/
+/* Burger Menu Styles */
 .burger {
     position: fixed;
     top: 20px;
@@ -168,12 +240,14 @@ body {
     height: 30px;
     background: transparent;
     cursor: pointer;
-    display: none; /* Hide by default */
+    display: none;
     z-index: 1000;
+    animation: slideTop 1s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .burger input {
-    display: none; /* Hide the actual checkbox */
+    display: none;
 }
 
 .burger span {
@@ -207,32 +281,31 @@ body {
 }
 
 /* Transform spans into "X" when checkbox is checked */
-.burger input:checked ~ span:nth-of-type(1) {
+.burger input:checked~span:nth-of-type(1) {
     background: #0b0c10;
     transform: rotate(45deg);
     top: 0;
     left: 5px;
 }
 
-.burger input:checked ~ span:nth-of-type(2) {
+.burger input:checked~span:nth-of-type(2) {
     width: 0%;
     opacity: 0;
 }
 
-.burger input:checked ~ span:nth-of-type(3) {
+.burger input:checked~span:nth-of-type(3) {
     background: #0b0c10;
     transform: rotate(-45deg);
     top: 28px;
     left: 5px;
 }
 
-
-
-/*-----------------Sidebar Styles-----------------*/
+/* Sidebar Styles */
 .sidemenu {
     position: fixed;
     top: 0;
-    right: -200px; /* Hide sidebar by default */
+    right: -200px;
+    /* Hide sidebar by default */
     width: 200px;
     height: 100vh;
     background: #45A29E;
@@ -244,7 +317,7 @@ body {
 .sidemenu ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 60px 0;
 }
 
 .sidemenu ul li {
@@ -309,11 +382,10 @@ body {
     color: #66FCF1;
 }
 
-/*-----------------Typing Animation Container-----------------*/
+/* Typing Animation Container */
 .mult-text-container {
     display: inline-block;
     width: 500px;
-    /* Set a fixed width */
     text-align: center;
 }
 
@@ -321,7 +393,7 @@ body {
     display: inline-block;
 }
 
-/*-----------------Home Selfie Image-----------------*/
+/* Home Selfie Image */
 .selfie img {
     width: 500px;
     height: 500px;
@@ -344,7 +416,6 @@ body {
 
 .about-subtitle {
     text-align: center;
-    /* Center the subtitle */
 }
 
 .about-content {
@@ -352,9 +423,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
     gap: 20px;
-    /* Add spacing between columns */
 }
 
 .about-col1 {
@@ -409,7 +478,7 @@ body {
     font-size: 18px;
 }
 
-/*-----------------Education About Section-----------------*/
+/* Education About Section */
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -449,7 +518,7 @@ body {
     margin-top: 10px;
 }
 
-/*-----------------About Section's Radio Btn-----------------*/
+/* About Section Radio Btn */
 .radio-inputs {
     position: relative;
     display: flex;
@@ -520,57 +589,7 @@ body {
     box-shadow: 3px 3px 0px 3px #66FCF1;
 }
 
-
-/*-----------------Pre Loader-----------------*/
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    z-index: 1000;
-    flex-direction: column;
-}
-
-.main-content {
-    /*Hide main content at start*/
-    display: none;
-}
-
-.preloader-text {
-    margin-bottom: 20px;
-    color: #0b0c10;
-    animation: text_713 3.5s ease both infinite;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.preload {
-    position: relative;
-    background-color: #45a29e;
-    border-radius: 50px;
-    display: block;
-    height: 16px;
-    width: 16px;
-    animation: loading_713 3.5s ease both infinite;
-}
-
-.preload::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #66fcf1;
-    border-radius: inherit;
-    animation: loading2_713 3.5s ease both infinite;
-}
-
-
-/*-----------------specialization Section-----------------*/
+/*-----------------Specialization Section-----------------*/
 #specialization {
     padding: 30px 0;
 }
@@ -808,7 +827,7 @@ form textarea {
     outline: none;
     background: #fff;
     padding: 15px;
-    margin: 15px 0;
+    margin: 12px 0;
     color: #0B0C10;
     font-size: 16px;
     border-radius: 6px;
@@ -821,11 +840,13 @@ form .btn {
     cursor: pointer;
 }
 
-/* New Button */
-/* From Uiverse.io by satyamchaudharydev */
+/* CV Download Button */
 .cv-download {
-    width: 150px;
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 60px 0;
 }
 
 .button {
@@ -846,9 +867,9 @@ form .btn {
     font-family: "Arial";
     transition: background 0.3s;
     cursor: pointer;
-  }
-  
-  .button::before {
+}
+
+.button::before {
     position: absolute;
     content: attr(data-tooltip);
     width: var(--tooltip-width);
@@ -860,9 +881,9 @@ form .btn {
     line-height: var(--tooltip-height);
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
     left: calc(50% - var(--tooltip-width) / 2);
-  }
-  
-  .button::after {
+}
+
+.button::after {
     position: absolute;
     content: '';
     width: 0;
@@ -871,93 +892,164 @@ form .btn {
     border-top-color: var(--tooltip-color);
     left: calc(50% - 10px);
     bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-  }
-  
-  .button::after,.button::before {
+}
+
+.button::after,
+.button::before {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
-  }
-  
-  .text {
+}
+
+.button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.text {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .button-wrapper,.text,.icon {
+}
+
+.button-wrapper,
+.text,
+.icon {
     overflow: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     color: #fff;
-  }
-  
-  .text {
+}
+
+.text {
     top: 0
-  }
-  
-  .text,.icon {
+}
+
+.text,
+.icon {
     transition: top 0.5s;
-  }
-  
-  .icon {
+}
+
+.icon {
     color: #0b0c10;
     top: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .icon svg {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .button:hover {
-    background: #66fcf1;
-  }
-  
-  .button:hover .text {
-    top: -100%;
-  }
-  
-  .button:hover .icon {
-    top: 0;
-  }
-  
-  .button:hover:before,.button:hover:after {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .button:hover:after {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-  }
-  
-  .button:hover:before {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-  }
-  
-  
-
-#msg {
-    color: #66FCF1;
-    margin-top: -40px;
-    display: block;
 }
 
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
 
+.button:hover {
+    background: #66fcf1;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* Form Submit Button */
+.form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.submit-btn {
+    font-family: inherit;
+    font-size: 20px;
+    background-color: #0b0c10;
+    color: #fff;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: 1px solid #66fcf1;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+}
+
+.submit-btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submit-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.submit-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.submit-btn:hover span {
+    transform: translateX(5em);
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
+#msg {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #66FCF1;
+    margin-top: 5px;
+}
 
 /*-----------------Website Footer-----------------*/
 .copyright {
+    display: flex;
+    justify-content: center;
     width: 100%;
     text-align: center;
     padding: 25px 0;
     background: #1f2833;
     font-weight: 300;
-    margin-top: 20px;
 }
 
 
@@ -1224,15 +1316,19 @@ nav .fa-solid {
 
     /* Show burger menu and sidebar on small screens */
     .navbar {
-        display: none; /* Hide navbar on small screens */
+        display: none;
     }
 
     .burger {
-        display: block; /* Show burger menu on small screens */
+        display: block;
     }
 
-    #burger:checked ~ .sidemenu {
-        right: 0; /* Show sidebar when burger is checked */
+    #burger:checked~ .sidemenu {
+        right: 0;
+    }
+
+    #burger:checked~ .burger {
+        transform: translate(-120px, 0);
     }
 }
 
@@ -1308,6 +1404,16 @@ nav .fa-solid {
     }
 }
 
+/*-----------------Submit Form Button-----------------*/
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
 
 /*-----------------Preloader-----------------*/
 @keyframes text_713 {

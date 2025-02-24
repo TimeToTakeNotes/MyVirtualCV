@@ -3,10 +3,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const initSideMenu = () => {
         const sidemenu = document.getElementById("sidemenu");
         const burgerCheckbox = document.getElementById("burger");
-
-        const openMenu = () => sidemenu.style.right = "0";
-        const closeMenu = () => sidemenu.style.right = "-200px";
-
+        const burger = document.querySelector(".burger");
+    
+        const openMenu = () => {
+            sidemenu.style.right = "0"; // Open the sidebar
+            burger.style.transform = "translateX(-120px)"; // Slide the burger menu with the sidebar
+        };
+    
+        const closeMenu = () => {
+            sidemenu.style.right = "-200px"; // Close the sidebar
+            burger.style.transform = "translateX(0)"; // Slide the burger menu back to its original position
+        };
+    
         burgerCheckbox.addEventListener("change", () => {
             if (burgerCheckbox.checked) {
                 openMenu();
@@ -14,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 closeMenu();
             }
         });
-
+    
         // Close sidebar when clicking outside
         document.addEventListener("click", (event) => {
             if (!sidemenu.contains(event.target) && !event.target.closest(".burger")) {
@@ -113,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // -------- Google Sheets Form Submission -------- //
     const initContactForm = () => {
-        const scriptURL = 'https://script.google.com/macros/s/.../exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbws6M4x9a-1GfTpna-soiw2vfqwx5j3SIde4ih0zit_mIzZxxjpdRfdl3lAwLjSu6ic/exec';
         const form = document.forms['submit-to-google-sheet'];
         const msg = document.getElementById("msg");
 
@@ -159,19 +167,20 @@ document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
             let currentSection = '';
-
+    
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - sectionHeight / 3) {
+                
+                if (window.scrollY >= sectionTop - sectionHeight / 3) {
                     currentSection = section.getAttribute('id');
                 }
             });
-
+    
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 link.removeAttribute('aria-current');
-                if (link.getAttribute('href').includes(currentSection)) {
+                if (link.getAttribute('href').includes(`#${currentSection}`)) {
                     link.classList.add('active');
                     link.setAttribute('aria-current', 'page');
                 }
