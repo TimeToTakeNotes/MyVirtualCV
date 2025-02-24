@@ -48,6 +48,7 @@ body {
 
 .btn:hover {
     background: #66fcf1;
+    color: #0b0c10;
 }
 
 /*-----------------Header Section-----------------*/
@@ -70,9 +71,11 @@ body {
     text-decoration: none;
     font-weight: 600;
     cursor: default;
-    opacity: 0; /*Logo will start hidden*/
-    animation: slideRight 1s ease forwards;/*Logo slide in animation*/    
-    background: linear-gradient(to right, #fff, #66FCF1); 
+    opacity: 0;
+    /*Logo will start hidden*/
+    animation: slideRight 1s ease forwards;
+    /*Logo slide in animation*/
+    background: linear-gradient(to right, #fff, #66FCF1);
     background-clip: text;
     color: transparent;
 }
@@ -124,8 +127,10 @@ body {
     transition: .3s;
     opacity: 0;
     position: relative;
-    animation: slideTop 1s ease forwards; /*menu slide in animation*/ 
-    animation-delay: calc(.2s * var(--i)); /*Delay based on index*/
+    animation: slideTop 1s ease forwards;
+    /*menu slide in animation*/
+    animation-delay: calc(.2s * var(--i));
+    /*Delay based on index*/
 }
 
 .nav-link::after {
@@ -144,13 +149,117 @@ body {
 }
 
 .nav-link:hover::after {
-    transform: scaleX(1); /*Reveal on hover*/
+    transform: scaleX(1);
+    /*Reveal on hover*/
     transform-origin: left;
 }
 
 .nav-link:hover {
     color: #66fcf1;
     transition: color 0.3s, text-decoration 0.3s;
+}
+
+/*-----------------Burger Menu Styles-----------------*/
+.burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    z-index: 1000;
+}
+
+.burger input {
+    display: none; /* Hide the actual checkbox */
+}
+
+.burger span {
+    display: flexbox;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #66fcf1;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+}
+
+/* Transform spans into "X" when checkbox is checked */
+.burger input:checked ~ span:nth-of-type(1) {
+    background: #0b0c10;
+    transform: rotate(45deg);
+    top: 0;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    background: #0b0c10;
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+
+
+/*-----------------Sidebar Styles-----------------*/
+.sidemenu {
+    position: fixed;
+    top: 0;
+    right: -200px; /* Hide sidebar by default */
+    width: 200px;
+    height: 100vh;
+    background: #45A29E;
+    transition: right 0.5s ease;
+    z-index: 999;
+    padding-top: 20px;
+}
+
+.sidemenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidemenu ul li {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.sidemenu ul li a {
+    color: #0B0C10 !important;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidemenu .nav-link::after {
+    background: #0b0c10;
 }
 
 
@@ -203,7 +312,8 @@ body {
 /*-----------------Typing Animation Container-----------------*/
 .mult-text-container {
     display: inline-block;
-    width: 500px; /* Set a fixed width */
+    width: 500px;
+    /* Set a fixed width */
     text-align: center;
 }
 
@@ -225,7 +335,6 @@ body {
     background: linear-gradient(70deg, #fff 10%, #c5c6c7 30%, #1f2833 50%, #0b0c10 75%);
 }
 
-
 /*-----------------About Section-----------------*/
 .about-row {
     display: flex;
@@ -234,15 +343,18 @@ body {
 }
 
 .about-subtitle {
-    text-align: center; /* Center the subtitle */
+    text-align: center;
+    /* Center the subtitle */
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Add spacing between columns */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    gap: 20px;
+    /* Add spacing between columns */
 }
 
 .about-col1 {
@@ -262,7 +374,7 @@ body {
 
 .about-col2 {
     flex: 1 1 60%;
-    max-width: 60%; 
+    max-width: 60%;
     font-size: 16px;
 }
 
@@ -341,12 +453,18 @@ body {
 .radio-inputs {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 0.5rem;
     background-color: #0b0c10;
     box-sizing: border-box;
     font-size: 16px;
     width: 90%;
     padding: 1rem 1rem 0 1rem;
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    margin: 0.5rem;
 }
 
 .radio-inputs .radio input {
@@ -584,25 +702,6 @@ body {
     transform: scale(1.2);
 }
 
-/* .layer a:hover::before {
-    content: "Hover Label"; 
-    position: absolute;
-    top: -30px; 
-    left: 50%;
-    transform: translateX(-50%);
-    background: #45A29E; 
-    color: #fff; 
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.layer a:hover::before {
-    opacity: 1;
-} */
-
 .work:hover img {
     transform: scale(1.1);
 }
@@ -631,12 +730,9 @@ body {
 }
 
 .slider-controls .btn:hover {
-    background: #45A29E;
+    background: #66fcf1;
+    color: #0b0c10;
 }
-
-
-
-
 
 /*-----------------Contact Section-----------------*/
 #contact {
@@ -725,6 +821,127 @@ form .btn {
     cursor: pointer;
 }
 
+/* New Button */
+/* From Uiverse.io by satyamchaudharydev */
+.cv-download {
+    width: 150px;
+    height: 50px;
+}
+
+.button {
+    --width: 150px;
+    --height: 50px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #0b0c10;
+    --tooltip-color: #fff;
+    border: 1px solid #66FCF1;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  
+  .button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .button::after,.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0
+  }
+  
+  .text,.icon {
+    transition: top 0.5s;
+  }
+  
+  .icon {
+    color: #0b0c10;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button:hover {
+    background: #66fcf1;
+  }
+  
+  .button:hover .text {
+    top: -100%;
+  }
+  
+  .button:hover .icon {
+    top: 0;
+  }
+  
+  .button:hover:before,.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
+  
+
 #msg {
     color: #66FCF1;
     margin-top: -40px;
@@ -811,7 +1028,7 @@ nav .fa-solid {
         max-width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
     .about-col1 img {
@@ -850,7 +1067,7 @@ nav .fa-solid {
     .navbar {
         top: 70px;
     }
-    
+
     .navbar.sticky {
         top: 0;
     }
@@ -940,13 +1157,13 @@ nav .fa-solid {
         display: grid;
         grid-template-columns: 1fr;
     }
-    
+
     .work {
         display: flex;
         flex: 1 1 100%;
         flex-direction: column;
     }
-    
+
     .work img {
         width: 100%;
         height: 400px;
@@ -992,8 +1209,8 @@ nav .fa-solid {
     }
 
     .radio-inputs {
-        font-size: 16px;
-        margin-right: 20px;
+        flex-direction: column;
+        padding: 0.5rem;
     }
 
     .contact-left,
@@ -1005,58 +1222,17 @@ nav .fa-solid {
         font-size: 14px;
     }
 
-    /*-----------------Home Hamburger Menu Icon-----------------*/
-nav .fa-bars {
-        display: block;
-        font-size: 28px;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        z-index: 2;
+    /* Show burger menu and sidebar on small screens */
+    .navbar {
+        display: none; /* Hide navbar on small screens */
     }
 
-    nav ul .fa-x {
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 28px;
-        cursor: pointer;
-        z-index: 2;
+    .burger {
+        display: block; /* Show burger menu on small screens */
     }
 
-    .nav-link::after {
-        background-color: #0b0c10;
-    }
-
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: -200px;
-        background: #45A29E;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: right 0.5s ease;
-        color: #0B0C10;
-        background: linear-gradient(to right, #45A29E, #66FCF1);
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px 0;
-        font-size: 36px !important;
-        color: #0B0C10;
-        text-align: center;
-    }
-
-    nav ul li a {
-        color: #0B0C10 !important;
+    #burger:checked ~ .sidemenu {
+        right: 0; /* Show sidebar when burger is checked */
     }
 }
 

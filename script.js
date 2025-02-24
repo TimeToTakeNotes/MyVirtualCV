@@ -1,12 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
     // -------- Side Menu for Small/Mobile Screens -------- //
-    const sidemenu = document.getElementById("sidemenu");
+    const initSideMenu = () => {
+        const sidemenu = document.getElementById("sidemenu");
+        const burgerCheckbox = document.getElementById("burger");
 
-    const openMenu = () => sidemenu.style.right = "0";
-    const closeMenu = () => sidemenu.style.right = "-200px";
+        const openMenu = () => sidemenu.style.right = "0";
+        const closeMenu = () => sidemenu.style.right = "-200px";
 
-    window.openmenu = openMenu;
-    window.closemenu = closeMenu;
+        burgerCheckbox.addEventListener("change", () => {
+            if (burgerCheckbox.checked) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener("click", (event) => {
+            if (!sidemenu.contains(event.target) && !event.target.closest(".burger")) {
+                burgerCheckbox.checked = false;
+                closeMenu();
+            }
+        });
+    };
 
     // -------- Event Listeners for Tabs -------- //
     const initTabs = () => {
@@ -164,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // -------- Initialize All Functions -------- //
+    initSideMenu();
     initTabs();
     initNavbarLinks();
     initPreloader();

@@ -32,17 +32,33 @@
     <header class="header">
         <div class="container">
             <a href="#" class="logo">Arno Christie's Portfolio<span>.</span></a>
-            <nav class="navbar sticky" role="navigation"> 
-                <ul id="sidemenu" role="list">
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            <!-- Burger Menu for Small Screens-->
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            <nav class="navbar sticky" role="navigation">
+                <!-- Navigation Links -->
+                <ul role="list">
                     <li><a href="#home" class="nav-link" style="--i:1;">Home</a></li>
                     <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
                     <li><a href="#specialization" class="nav-link" style="--i:3;">Specialization</a></li>
                     <li><a href="#work" class="nav-link" style="--i:4;">Work</a></li>
                     <li><a href="#contact" class="nav-link" style="--i:5;">Contact</a></li>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+             <!-- Sidebar (Visible only on small screens) -->
+            <div id="sidemenu" class="sidemenu">
+                <ul role="list">
+                    <li><a href="#home" class="nav-link" style="--i:1;">Home</a></li>
+                    <li><a href="#about" class="nav-link" style="--i:2;">About</a></li>
+                    <li><a href="#specialization" class="nav-link" style="--i:3;">Specialization</a></li>
+                    <li><a href="#work" class="nav-link" style="--i:4;">Work</a></li>
+                    <li><a href="#contact" class="nav-link" style="--i:5;">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -323,7 +339,19 @@
                                 class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/TimeToTakeNotes"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="images/ArnoChristie-CV.pdf" download class="btn download-btn">Download CV</a>
+                    <a href="images/ArnoChristie-CV.pdf" download class="btn">Download CV</a>
+                    
+                    <a href="images/ArnoChristie-CV.pdf" download class="cv-download">
+                        <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                            <div class="text">Download CV</div>
+                                <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    
                 </div>
                 <div class="contact-right aligned">
                     <form name="submit-to-google-sheet">
