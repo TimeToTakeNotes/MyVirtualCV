@@ -313,6 +313,7 @@ section {
     transition: right 0.5s ease;
     z-index: 999;
     padding-top: 20px;
+    height: 100%;
 }
 
 .sidemenu ul {
@@ -1153,7 +1154,7 @@ nav .fa-solid {
 
 @media (max-width: 768px) {
     .logo {
-        font-size: 24px;
+        font-size: 36px;
     }
 
     .logo span {
@@ -1169,7 +1170,7 @@ nav .fa-solid {
     }
 
     .nav-link {
-        font-size: 18px;
+        font-size: 21px;
     }
 
     .home {
@@ -1179,12 +1180,12 @@ nav .fa-solid {
 
     .home-text h1,
     .home-text h3 {
-        font-size: 21px;
+        font-size: 32px;
     }
 
     .selfie img {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
     }
 
     .work {
@@ -1207,6 +1208,22 @@ nav .fa-solid {
     .contact-left,
     .contact-right {
         flex-basis: 100%;
+    }
+
+    .about-col2 p {
+        font-size: 21px;
+    }
+
+    .about-col2 ul li {
+        font-size: 18px;
+    }
+
+    .about-col2 ul li span{
+        font-size: 20px;
+    }
+
+    .radio-inputs .name {
+        font-size: 21px;
     }
 
     .flex-container {
@@ -1238,6 +1255,10 @@ nav .fa-solid {
     .flex-item:nth-child(3) {
         order: 2;
     }
+
+    .specialization-list p {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1246,12 +1267,12 @@ nav .fa-solid {
     }
 
     .home-text h3 {
-        font-size: 18px;
+        font-size: 32px;
     }
 
     .selfie img {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .radio-inputs .radio input:checked+.name::after,
