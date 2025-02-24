@@ -1,20 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // -------- Side Menu for Small/Mobile Screens -------- //
     const initSideMenu = () => {
         const sidemenu = document.getElementById("sidemenu");
         const burgerCheckbox = document.getElementById("burger");
         const burger = document.querySelector(".burger");
-    
+
         const openMenu = () => {
             sidemenu.style.right = "0"; // Open the sidebar
             burger.style.transform = "translateX(-120px)"; // Slide the burger menu with the sidebar
         };
-    
+
         const closeMenu = () => {
             sidemenu.style.right = "-200px"; // Close the sidebar
             burger.style.transform = "translateX(0)"; // Slide the burger menu back to its original position
         };
-    
+
         burgerCheckbox.addEventListener("change", () => {
             if (burgerCheckbox.checked) {
                 openMenu();
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 closeMenu();
             }
         });
-    
+
         // Close sidebar when clicking outside
         document.addEventListener("click", (event) => {
             if (!sidemenu.contains(event.target) && !event.target.closest(".burger")) {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const initNavbarLinks = () => {
         const links = document.querySelectorAll('.nav-link');
         links.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 links.forEach(item => item.classList.remove('active'));
                 this.classList.add('active');
             });
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const msg = document.getElementById("msg");
 
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                     .then(response => {
@@ -167,16 +167,16 @@ document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
             let currentSection = '';
-    
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (window.scrollY >= sectionTop - sectionHeight / 3) {
                     currentSection = section.getAttribute('id');
                 }
             });
-    
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 link.removeAttribute('aria-current');
