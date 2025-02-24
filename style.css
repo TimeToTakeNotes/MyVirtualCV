@@ -1211,19 +1211,15 @@ nav .fa-solid {
     }
 
     .about-col2 p {
-        font-size: 21px;
-    }
-
-    .about-col2 ul li {
         font-size: 18px;
     }
 
-    .about-col2 ul li span{
-        font-size: 20px;
+    .about-col2 ul li {
+        font-size: 16px;
     }
 
-    .radio-inputs .name {
-        font-size: 21px;
+    .about-col2 ul li span{
+        font-size: 18px;
     }
 
     .flex-container {
