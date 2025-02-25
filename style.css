@@ -183,7 +183,6 @@ section {
 
 .nav-link.active {
     color: #66fcf1;
-    /* Example: Change color */
     font-weight: bold;
 }
 
@@ -203,7 +202,6 @@ section {
 
 .nav-link.active::after {
     transform: scaleX(1);
-    /*Reveal on hover*/
     transform-origin: left;
 }
 
@@ -223,7 +221,6 @@ section {
 
 .nav-link:hover::after {
     transform: scaleX(1);
-    /*Reveal on hover*/
     transform-origin: left;
 }
 
@@ -1158,7 +1155,7 @@ nav .fa-solid {
     }
 
     .logo span {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .navbar {
@@ -1170,12 +1167,7 @@ nav .fa-solid {
     }
 
     .nav-link {
-        font-size: 21px;
-    }
-
-    .home {
-        margin-top: -80px;
-        margin-bottom: -50px;
+        font-size: 18px;
     }
 
     .home-text h1,
@@ -1258,6 +1250,10 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 26px;
+    }
+
     .home-text h1 {
         font-size: 36px;
     }
