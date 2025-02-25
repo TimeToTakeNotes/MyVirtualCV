@@ -18,6 +18,8 @@ body {
     color: #fff;
 }
 
+
+
 .container {
     padding: 5px 5%;
 }
@@ -669,9 +671,10 @@ section {
 
 .work img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     border-radius: 10px 10px 0 0;
     display: block;
+    object-fit: cover;
     transition: transform 0.5s;
 }
 
@@ -863,7 +866,7 @@ form .btn {
     position: relative;
     text-align: center;
     border-radius: 0.45em;
-    font-family: "Arial";
+    font-size: 16px;
     transition: background 0.3s;
     cursor: pointer;
 }
@@ -985,7 +988,7 @@ form .btn {
 
 .submit-btn {
     font-family: inherit;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #0b0c10;
     color: #fff;
     padding: 0.7em 1em;
@@ -993,7 +996,7 @@ form .btn {
     display: flex;
     align-items: center;
     border: 1px solid #66fcf1;
-    border-radius: 16px;
+    border-radius: 0.45rem;
     overflow: hidden;
     transition: all 0.2s;
     cursor: pointer;
@@ -1252,6 +1255,10 @@ nav .fa-solid {
 @media only screen and (max-width: 600px) {
     .logo {
         font-size: 26px;
+    }
+
+    .header {
+        margin-bottom: 50px;
     }
 
     .home-text h1 {
