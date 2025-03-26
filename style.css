@@ -11,14 +11,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background: #0b0c10;
     color: #fff;
+    overflow-x: hidden;
 }
-
-
 
 .container {
     padding: 5px 5%;
@@ -562,6 +562,10 @@ section {
 
 .radio-inputs .radio input+.name:hover {
     color: #66FCF1;
+}
+
+.radio-inputs .radio input:checked+.name:hover {
+    color: #0b0c10;
 }
 
 .radio input:checked+.name {
@@ -1270,8 +1274,8 @@ nav .fa-solid {
     }
 
     .selfie img {
-        width: 300px;
-        height: 300px;
+        max-width: 100%;
+        height: auto;
     }
 
     .radio-inputs .radio input:checked+.name::after,
@@ -1323,7 +1327,7 @@ nav .fa-solid {
     }
 
     .work-slider {
-        overflow: visible;
+        overflow: hidden;
         position: relative;
         max-width: 100%;
         margin: 0 auto;

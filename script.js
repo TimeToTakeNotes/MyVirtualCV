@@ -32,6 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
+    // -------- Copyright Year Update -------- //
+    const copyrightYear = () => {
+        document.querySelectorAll('.copyright-year').forEach(el => {
+            el.textContent = new Date().getFullYear();
+        });
+    };
+
     // -------- Event Listeners for Tabs -------- //
     const initTabs = () => {
         const radios = document.querySelectorAll('.radio input');
@@ -128,13 +135,29 @@ document.addEventListener("DOMContentLoaded", function () {
         if (form) {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        msg.innerHTML = "Message sent successfully";
+
+                const senderName = form.elements['Name'].value.trim();
+
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new FormData(form) 
+                })
+                .then(response => response.json()) // Parse JSON response
+                .then(data => {
+                    if (data.result === "success") { // Check server response
+                        msg.innerHTML = `Message sent successfully! Thank you, ${senderName}.`;
                         setTimeout(() => msg.innerHTML = "", 5000);
                         form.reset();
-                    })
-                    .catch(error => console.error('Error!', error.message));
+                    } else {
+                        msg.innerHTML = "Error: Submission failed";
+                        setTimeout(() => msg.innerHTML = "", 5000);
+                    }
+                })
+                .catch(error => {
+                    msg.innerHTML = "Error: Could not send message";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    console.error('Error!', error.message);
+                });
             });
         } else {
             console.error('Form not found!');
@@ -188,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
+
     // -------- Initialize All Functions -------- //
     initSideMenu();
     initTabs();
@@ -197,4 +221,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initContactForm();
     initWorkSlider();
     initScrollSpy();
+    copyrightYear();
 });
