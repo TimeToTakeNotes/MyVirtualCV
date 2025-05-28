@@ -476,6 +476,21 @@ section {
     display: block;
 }
 
+.job-description {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.job-description ul {
+    list-style-type: disc;
+}
+
+.job-description li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
 .name {
     font-size: 18px;
 }
@@ -499,7 +514,8 @@ section {
 
 .flex-right {
     flex: 1;
-    text-align: left;
+    text-align: right;
+    padding-right: 50px;
 }
 
 .flex-item {
